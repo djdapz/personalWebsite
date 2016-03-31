@@ -1,0 +1,935 @@
+<html>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<script src='homepageBehavior_2.js'></script>
+
+
+<style>
+
+	html, body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 100;
+		width:100%;
+		height: 100%;
+	}
+
+	.container{
+		width: 320;
+		height: 568;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#screen{
+		margin-top: -740
+	}
+
+	#iphone{
+		margin-left: -96px;
+		margin-top: 0px;
+
+	}
+
+	.content{
+		width: 100%;
+		background-color:white;
+		height: 100%;
+	}
+
+	.mainTitle{
+		font-size: 2em;
+		float: right;
+		text-align: right;
+		/* margin-right: 10px; */
+		/* margin-top: 1px; */
+		/* margin-bottom: 9px; */
+		position: relative;
+		right: 8px;
+	}
+
+	.calendar{
+		width:95%;
+		height: 50%;
+		background-color: white;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:2.5%;
+		background-color: #f0f0f0;
+	}
+
+
+	.titleRow{
+		width:100%;
+		height: 47px;
+	}
+	.calRow{
+		width:100%;
+		background-origin: blue;
+	}
+
+	.dayRow{
+		height:10%;
+	}
+
+
+	.headerName{
+		font-size: 25;
+		font-weight:100;
+		text-align: center;
+	}
+
+	.nameCell{
+		width:10px;
+		background-color: #f0f0f0;
+	}
+
+	.date{
+		width:13%;
+		border: 1px;
+		background-color: #f0f0f0;
+		padding: 0px
+	}
+
+	.dayName{
+		text-align: center;
+		border-style: solid;
+		border-width: 1px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		padding-top: 2px;
+		font-size:14px;
+		margin-right: 2px;
+	}
+
+	.dateCircle{
+		border-radius: 100%;
+
+		width: 35px;
+		height: 35px;
+		padding: 0px;
+
+		background: #1284E5;
+		border: 0px solid #666;
+		color: white;
+
+
+		font-family: "Helvetica";
+		letter-spacing: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#todayDateCircle{
+		background: #E51284;
+	}
+
+	.noDateCircle {
+		border-radius: 100%;
+
+		width: 35px;
+		height: 35px;
+		padding: 0px;
+		border: 0px solid #666;
+
+
+		font-family: "Helvetica";
+		letter-spacing: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#navDateCircle{
+		margin-right: 9;
+		margin-top: -64px;
+		width: 40;
+		height: 40;
+		font-size: 20px;
+		background-color: #E51284;
+	}
+
+	.dateNumber{
+		position: relative;
+		top:27%;
+		text-align: center;
+	}
+
+	td img{
+		width: 25px;
+		height: 25px;
+		margin-left: 7px;
+		margin-right: auto;
+	}
+
+
+
+
+	#analyticsButton{
+		  float: left;
+		  margin-left: 3.5%;
+		  position: relative;
+		  margin-top: 14px;
+	}
+
+	#analyticsImage{
+		  width: 140px;
+		  height: 170px;
+	}
+
+	#foodList{
+		float: right;
+		background-color: #f0f0f0;
+		margin-right: 2.5%;
+		position: relative;
+		top: 14;
+		width: 46%;
+	}
+
+	#actualList{
+		margin-top: 0px;
+		overflow: scroll;
+		overflow-x:hidden;
+		height: 24%;
+	}
+
+	ul {
+		list-style: none;
+		padding:0;
+		margin:0;
+		margin-top: 0;
+	}
+
+	li { 
+		padding-left: 1em; 
+		text-indent: -.9em;
+	}
+
+	li:before{
+		content: '';
+		display: inline-block;
+		height: 5px;
+		width: .5em;
+	}
+
+	#menuIcon{
+		width: 30;
+		height: 30;
+		float: left;
+		position: relative;
+		top: 31px;
+		left: 4.5%;
+	}
+
+	.foodIcon{
+		width: 20px;
+		height: 20px;
+		float: right;
+		margin-right: 10px;
+	}
+
+	#xIcon{
+		float: left;
+	  	width: 12px;
+	  	height: 12px;
+	  	margin-top: 3px;
+	  	margin-left: -5px;
+	}
+
+
+
+	#greyBackground{
+		height: 573px;
+		width: 323px;
+		position: absolute;
+		margin-top: -574px;
+		margin-left: -1px;
+		background-color: grey;
+		opacity: .4;
+		visibility: hidden;
+	}
+
+
+
+	#sym_heading {
+		font-family: 'open sans', sans-serif;
+		font-size: 25px;
+		padding-top: 0px;
+		margin-top: 6px;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+
+	#sym_entry {
+		height: 312px;
+		padding-left: 10px;
+		margin: 10px;
+		overflow: auto;
+		background-color: #EEEEEE;
+	}
+
+	.sym_name {
+		font-family: 'open sans', sans-serif;
+		font-size: 18px;
+		position: relative;
+		top: 0px;
+		margin-bottom: 5px;
+	}
+
+	.sym_time {
+		font-family: 'open sans', sans-serif;
+		margin-left: 10px;
+	}
+
+	.YNlabel {
+		font-family: 'open sans', sans-serif;
+		font-size: 13;
+	}
+
+	input[type=radio   ]{
+		margin-left: 17px;
+
+	}
+
+	#heartburn {
+		margin-bottom: 20px;
+	}
+
+	#mood {
+		margin-left: 12px;
+		margin-top: 10px;
+		font-family: 'open sans', sans-serif;
+		font-size: 20px;
+	}
+
+	#moodinput {
+		margin: 5px;
+		position: relative;
+		top: 3px;
+	}
+	#energy {
+		margin-left: 12px;
+		margin-top: 10px;
+		font-family: 'open sans', sans-serif;
+		font-size: 20px;
+	}
+
+	#energyinput {
+		margin: 5px;
+		position: relative;
+		top: 3px;
+	}
+
+
+	div.navigation {
+		border-bottom: 1px solid black;
+		height: 15%;
+		position: relative;
+	}
+
+	div.navigation.back {
+		position: relative;  
+		font-size: 128px;
+		display: inline-block;
+		transform: rotate(180deg);
+		width: 50px;
+		top: 50%;
+		margin-top: 14px;
+		margin-left: 12px;
+	}
+
+	.navigation-content {
+		border-left: 1px solid black;
+		position: absolute;
+		top: 0px;
+		width: 75%;
+		left: 23%;
+		height: 100%;
+		line-height: 9px;
+		text-align: left;
+		text-indent: 11px;
+	}
+
+	.number {
+		position: absolute;
+		border: 1px solid black;
+		display: inline-block;
+		border-radius: 100px;
+		padding: 5px;
+		padding-left: 8px;
+		padding-right: 8px;
+		right: 6%;
+		top: 35%;
+	}
+
+	.navigation-content .title {
+		font-size: 24px;
+	}
+
+	.back {
+		font-size: 128px;
+		display: inline-block;
+		width: 50px;
+		top: 50%;
+		margin-top: 14px;
+		margin-left: 12px;    
+	}
+
+	.foodContent {
+		width: 100%;
+		height: 65%;
+		position: relative;
+		padding: 8px;
+		top: -17%;
+	}
+
+	.description {
+		width: 52%;
+	  	margin-left: 3px;
+	  	height: 79%;
+	  	top: 21%;
+	  	resize: none;
+	  	position: relative;
+	  	font-size: 16px;
+	}
+
+	#selection {
+		display: inline-block;
+		width: 39%;
+		position: relative;
+		top: 20%;
+		left: 2%;
+		line-height: 20px;   
+	}
+
+	#page-title {
+		top: 0%;
+		position: relative;
+		text-align: center;
+		font-style: bold;
+	}
+
+	.done {
+		position: relative;
+		top: 50%;
+		font-size: 16px;
+		padding: 10px;
+		width: 80px;
+	}
+
+	#sym_window{
+		border: 1px solid black;
+		background-color: #white;
+		height: 424;
+		margin-top: -459px;
+		border: none; 
+	}
+
+	.window{
+		height: 500px;
+		width: 300px;
+		position: absolute;
+		margin-top: -535px;
+		margin-left: 8px;
+		background-color: white;
+		visibility: hidden;
+	}
+
+	.mealWindow{
+		border: 1px solid black;
+		background-color: #white;
+		height: 424;
+		margin-top: -458px;
+		border: none;    
+	}
+
+	#dailyReviewWindow{
+		visibility: hidden;
+	}
+
+	#mealMenu{
+		background-color: #f0f0f0;
+		height: 404px;
+		width: 47%;
+		margin: 10px;
+		float: left;
+	}
+
+	#symptomsPreview{
+		background-color: #f0f0f0;
+		float: right;
+		margin: 10;
+		margin-left: 0px;
+		margin-bottom: 10px;
+		width: 129px;
+		height: 190px;
+	}
+
+	#foodReminder{
+		background-color: #f0f0f0;
+	  	float: right;
+	  	margin: 10;
+	  	margin-left: 0;
+	  	margin-top: 5px;
+	  	width: 129px;
+	  	height: 199px;
+	}
+
+	.reviewTitle{
+		font-size: 18;
+		font-weight: 100;
+		text-align: left;
+		margin-left: 12px;
+		margin-top: 9px;
+	}
+
+	#symptomsTitle{
+		margin-top: 7px;
+		margin-left: 7px;
+
+	}
+
+	.plusIcon{
+		width: 20px;
+		height: 20px;
+		float: right;
+		margin-right: 8px;
+		margin-top: 3px;
+	}
+
+	.foodLogBox{
+		height: 55px;
+		width: 121px;
+
+	}
+
+	.logBox{
+		background-color: fafafa;
+		margin-left: 12px;
+		margin-top: -17px;
+		margin-bottom: 15px;
+		font-size: 12px;
+		overflow: scroll;
+		overflow-x:hidden;
+
+	}
+
+	.resultLogBox{
+		height: 150px;
+		width: 107px;
+		margin-top: -11;
+		overflow: hidden;
+	}
+
+	.foodLogP{
+		margin-top: 0;
+	}
+
+	#sym_done{
+		margin-top: 26px;
+	}
+
+	#successText{
+	  text-align: center;
+	  margin-top: 30px;
+	}
+
+	#resultList{
+
+	}
+
+	.resultListFail{
+		  margin-top: 2;
+  		margin-left: 2px;
+  		margin-bottom:-12px;
+	}
+
+	.successListItem{
+		font-size: 10px;
+	}
+
+	.symLogBox{
+	    height: 140;
+  		width: 114px;
+  		margin-left: 8px;
+  		overflow: hidden;
+	}
+
+	#symBox{
+		  margin-top: 6px;
+		  font-size: 13px;
+		  margin-left: 3px;
+	}
+
+	#analysisImage{
+		width: 320;
+		height: 568;
+	}
+
+	#analysisWindow{
+		visibility: hidden;
+		  height: 568;
+		  width: 320;
+		  margin-left: -1px;
+		  margin-top: -571px;
+	}
+
+	#analysisBack{
+		  position: absolute;
+		  height: 50px;
+		  margin-left: 16px;
+		  margin-top: 5px;
+	}
+
+	#backToDevon{
+		float:left
+	}
+
+	#backToDevonImg{
+		height: 100px;
+		width: 100px;
+		margin: 20px
+	}
+</style>
+
+<body onload="prepPage()">
+
+<a id="backToDevon" href="../index.html" >
+	<img id="backToDevonImg" src="images/backArrow.png"/>
+</a>
+
+
+<div class="container">
+
+	<img src="images/phone.png" id="iphone">
+	<div id="screen">
+
+		<img id="menuIcon" src="images/MenuIcon.png">
+		<div class="mainTitle">ELIMINATION<br>DIET</div>
+
+
+		<div class="content">
+			<table class="calendar">
+				<tr class="titleRow">
+					<td><img src="images/backArrow.png" alt="backArrow"></td>
+					<td class="TitleContainer", colspan=5><p class="headerName">March</p></td>
+					<td><img src="images/forwardArrow.png" alt="forwardArrow"></td>
+				</tr>
+				<tr class="dayRow">
+					<td class="nameCell"><div class="dayName">Sun</div></td>
+					<td class="nameCell"><div class="dayName">Mon</div></td>
+					<td class="nameCell"><div class="dayName">Tues</div></td>
+					<td class="nameCell"><div class="dayName">Wed</div></td>
+					<td class="nameCell"><div class="dayName">Thur</div></td>
+					<td class="nameCell"><div class="dayName">Fri</div></td>
+					<td class="nameCell"><div class="dayName">Sat</div></td>
+				</tr>
+				<tr class="calRow">
+					<td class="date"><div class="dateCircle"><div class="dateNumber">1</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">2</div></div></td>
+					<td class="date"><div class="dateCircle" ><div class="dateNumber">3</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">4</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">5</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">6</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">7</div></div></td>
+				</tr>
+				<tr class="calRow">
+					<td class="date"><div class="dateCircle"><div class="dateNumber">8</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">9</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">10</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">11</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">12</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">13</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">14</div></div></td>
+
+
+				</tr>
+				<tr class="calRow">
+					<td class="date"><div class="dateCircle"><div class="dateNumber">15</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">16</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">17</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">18</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">19</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">20</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">21</div></div></td>
+				</tr>
+				<tr class="calRow">
+					<td class="date"><div class="dateCircle"><div class="dateNumber">22</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">23</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">24</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">25</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">26</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">27</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">28</div></td>
+
+				</tr>
+				<tr class="calRow">
+					<td class="date"><div class="dateCircle"><div class="dateNumber">29</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">30</div></div></td>
+					<td class="date"><div class="dateCircle"><div class="dateNumber">31</div></div></td>
+
+				</tr>
+			</table>
+
+			<div id="analyticsButton">
+				<img src="images/analyticsGreenBlue.png", id='analyticsImage' onclick='showAnalysis()'>
+			</div>
+
+			<div id="foodList">
+				<div class="headerName">Avoid</div>
+				<div id="actualList">
+					<ul >
+						<li>Fruits<img class="foodIcon" src="images/fruitIcon.png"></li>
+						<li>Vetetables<img class="foodIcon" src="images/vegatablesIcon.png"></li>
+						<li>Red Meat<img class="foodIcon" src="images/redMeatIcon.png"></li>
+						<li>Starches<img class="foodIcon" src="images/starchIcon.png"></li>
+						<li>Fats<img class="foodIcon" src="images/fatsIcon.png"></li>
+						<li>Beverages<img class="foodIcon" src="images/sodaIcon.png"></li>
+						<li>Dairy<img class="foodIcon" src="images/dairyIcon.png"></li>
+						<li>Gluten<img class="foodIcon" src="images/glutenIcon.png"></li>
+						<li>Nuts<img class="foodIcon" src="images/nutIcon.png"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="greyBackground"></div>
+
+
+
+		<div class="window" id='dailyReviewWindow'>
+			<div class='navigation'>
+				<img class='back' src='images/backArrowBlue.png' id='navBack'onclick='backPressed()'>
+				<div class='navigation-content'>
+					<p class='title'>March</p>
+					<p>Day 12 of 30</p>
+				</div>
+				<div class='dateCircle' id="navDateCircle"><p class='dateNumber'>
+					9
+				</p></div>
+			</div>
+
+
+			<div id="mealMenu">
+				<h3 class="reviewTitle">breakfast<img class="plusIcon" id='breakfastButton' src="images/pinkPlusIcon.png" onclick="mealWindow('breakfast_window')"></h3>
+				<div class='logBox foodLogBox'><p class="foodLogP" id='breakfastBox'></p></div>
+
+				<h3 class="reviewTitle">lunch<img class="plusIcon" id='lunchButton' src="images/pinkPlusIcon.png" onclick="mealWindow('lunch_window')"></h3>
+				<div class='logBox foodLogBox'><p class="foodLogP" id='lunchBox'></p></div>
+
+				<h3 class="reviewTitle">dinner<img class="plusIcon" id='dinnerButton' src="images/pinkPlusIcon.png" onclick="mealWindow('dinner_window')"></h3>
+				<div class='logBox foodLogBox'><p class="foodLogP" id='dinnerBox'></p></div>
+
+				<h3 class="reviewTitle">snacks<img class="plusIcon" id='snackButton' src="images/pinkPlusIcon.png" onclick="mealWindow('snacks_window')"></h3>
+				<div class='logBox foodLogBox'><p class="foodLogP" id='snackBox'></p></div>
+
+			</div>
+
+			<div id="symptomsPreview">
+				<h3 class="reviewTitle" id='symptomsTitle'>symptoms<img class="plusIcon" id='symptomsButton' src="images/pinkPlusIcon.png" onclick="mealWindow('sym_window')"></h3>
+				<div class='logBox symLogBox'><p class="symLogP" id='symBox'></p></div>
+			</div>
+
+			<div id="foodReminder">
+				<h2 class="reviewTitle">success<img class='plusIcon' src='images/iIcon.png'></h2>
+				<div class='logBox resultLogBox' id='resultLogBox'> <p id='successText'>Good Job!<br> <br>You have <br>avoided all <br>of the foods!</div></p>
+			</div>
+		</div>
+
+		<div class= "window" id='sym_window' visible='hidden'>
+			<p id='sym_heading'>Symptoms</p>
+
+			<div id='sym_entry'>
+
+				<div id='upset'>
+					<p class="sym_name">Upset Stomach</p>
+					<input type="radio" id="Y1" class="YNbutton Ybutton" name="YN1"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N1" class="YNbutton" name="YN1" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id='nausea'>
+					<p class="sym_name">Nausea</p>
+					<input type="radio" id="Y2" class="YNbutton Ybutton" name="YN2"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N2" class="YNbutton" name="YN2" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id='stomachCramps'>
+					<p class="sym_name">Stomach Cramps</p>
+					<input type="radio" id="Y3" class="YNbutton Ybutton" name="YN3"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N3" class="YNbutton" name="YN3" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id='diarrhea'>
+					<p class="sym_name">Diarrhea</p>
+					<input type="radio" id="Y4" class="YNbutton Ybutton" name="YN4"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N4" class="YNbutton" name="YN4" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id='constipation'>
+					<p class="sym_name">Constipation</p>
+					<input type="radio" id="Y5" class="YNbutton Ybutton" name="YN5"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N5" class="YNbutton" name="YN5" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id='heartburn'>
+					<p class="sym_name">Heartburn</p>
+					<input type="radio" id="Y6" class="YNbutton Ybutton" name="YN6"/>
+					<label for="Y1" class="YNlabel">Yes</label>
+					<input type="radio" id="N6" class="YNbutton" name="YN6" checked />
+					<label for="N1" class="YNlabel">No</label>
+					<input type="time" class="sym_time">
+				</div>
+
+				<div id="mood">
+					<label for="moodinput">Mood:</label>
+					<input class="bar" type="range" id="moodinput" value="5" min="0" max="10" onchange="rangevalue.value=value">
+					<output id="rangevalue">5</output>
+				</div>
+
+				<div id="energy">
+					<label for="energyinput">Energy:</label>
+					<input class="bar" type="range" id="energyinput" value="5" min="0" max="10" onchange="rangevalue.value=value">
+					<output id="rangevalue">5</output>
+				</div>
+
+			</div>
+
+			<div style="text-align: center;position: relative;top: -5%; ">
+				<button class="done" id='sym_done' onclick='doneButton("DONTHAVEONE", "symBox", "symptomsButton", "sym_window")'>Done</button>
+			</div>
+		</div>
+
+
+		<div class="window mealWindow" id='breakfast_window'>
+			<h2 id='page-title'>Breakfast</h2>
+
+			<div class='foodContent'>
+				<textarea class='description' id='breakfastText' placeholder='Please Enter Your Food'></textarea>
+				<div id='selection'>
+					<p class="title">Did you end up eating?</p>
+					<div>
+						<input type="checkbox" name="food" value="0">Citrus Fruits<br>
+						<input type="checkbox" name="food" value="1">Tomatoes<br>
+						<input type="checkbox" name="food" value="2">Red Meat<br>
+						<input type="checkbox" name="food" value="3">Fats<br>
+						<input type="checkbox" name="food" value="4">Soda<br>
+						<input type="checkbox" name="food" value="5">Dairy<br>
+						<input type="checkbox" name="food" value="6">Nuts<br>
+						<input type="checkbox" name="food" value="7">Gluten<br>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center;position: relative;top: -5%;">
+				<button class="done" onclick="doneButton('breakfastText','breakfastBox', 'breakfastButton', 'breakfast_window')">Done</button>
+			</div>
+		</div>
+
+
+		<div class="window mealWindow" id='lunch_window'>
+			<h2 id='page-title'>Lunch</h2>
+
+			<div class='foodContent'>
+				<textarea class='description' id='lunchText' placeholder='Please Enter Your Food'></textarea>
+				<div id='selection'>
+					<p class='title'>Did you end up eating?</p>
+					<div>
+						<input type="checkbox" name="food" value="fruits">Citrus Fruits<br>
+						<input type="checkbox" name="food" value="vegetables">Tomatoes<br>
+						<input type="checkbox" name="food" value="meat">Red Meat<br>
+						<input type="checkbox" name="food" value="fats">Fats<br>
+						<input type="checkbox" name="food" value="beverages">Soda<br>
+						<input type="checkbox" name="food" value="dairy">Dairy<br>
+						<input type="checkbox" name="food" value="nuts">Nuts<br>
+						<input type="checkbox" name="food" value="gluten">Gluten<br>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center;position: relative;top: -5%;">
+				<button class="done" onclick="doneButton('lunchText','lunchBox', 'lunchButton', 'lunch_window')">Done</button>
+			</div>
+		</div>
+
+
+		<div class="window mealWindow" id='dinner_window'>
+			<h2 id='page-title'>Dinner</h2>
+
+			<div class='foodContent'>
+				<textarea class='description' id='dinnerText' placeholder='Please Enter Your Food'></textarea>
+				<div id='selection'>
+					<p class='title'>Did you end up eating?</p>
+					<div>
+						<input type="checkbox" name="food" value="fruits">Citrus Fruits<br>
+						<input type="checkbox" name="food" value="vegetables">Tomatoes<br>
+						<input type="checkbox" name="food" value="meat">Red Meat<br>
+						<input type="checkbox" name="food" value="fats">Fats<br>
+						<input type="checkbox" name="food" value="beverages">Soda<br>
+						<input type="checkbox" name="food" value="dairy">Dairy<br>
+						<input type="checkbox" name="food" value="nuts">Nuts<br>
+						<input type="checkbox" name="food" value="gluten">Gluten<br>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center;position: relative;top: -5%;">
+				<button class="done" onclick="doneButton('dinnerText','dinnerBox', 'dinnerButton', 'dinner_window')">Done</button>
+			</div>
+		</div>
+
+
+		<div class="window mealWindow" id='snacks_window'>
+			<h2 id='page-title'>Snacks</h2>
+
+			<div class='foodContent'>
+				<textarea class='description' id='snackText' placeholder='Please Enter Your Food'></textarea>
+				<div id='selection'>
+					<p class='title'>Did you end up eating?</p>
+					<div>
+						<input type="checkbox" name="food" value="fruits">Citrus Fruits<br>
+						<input type="checkbox" name="food" value="vegetables">Tomatoes<br>
+						<input type="checkbox" name="food" value="meat">Red Meat<br>
+						<input type="checkbox" name="food" value="fats">Fats<br>
+						<input type="checkbox" name="food" value="beverages">Soda<br>
+						<input type="checkbox" name="food" value="dairy">Dairy<br>
+						<input type="checkbox" name="food" value="nuts">Nuts<br>
+						<input type="checkbox" name="food" value="gluten">Gluten<br>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center;position: relative;top: -5%;">
+				<button class="done" onclick="doneButton('snackText','snackBox', 'snackButton', 'snacks_window')">Done</button>
+			</div>
+		</div>
+
+		<div id="analysisWindow" class="window">
+			<img src='images/backArrowBlue.png' id="analysisBack" onclick='hideAnalysis()'>
+			<img id="analysisImage" src='images/analysisPage.png' id='analysis'>
+		</div>
+
+
+	</div>
+</div>
+
+
+
+</body>
+
+
+
+
+</html>
