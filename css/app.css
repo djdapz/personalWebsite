@@ -1,0 +1,183 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+p, div {
+    font-family: 'Raleway', sans-serif;
+}
+.mid_nopad{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.top_nopad{
+    text-align: center;
+    margin-bottom: 0px
+}
+
+.bot_nopad{
+    text-align: center;
+    margin-top: 0px
+}
+
+.navbar {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.navbar a {
+    color: #870202;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;}
+
+
+
+.shrink{
+    background:rgba(255,255,255,0.5)
+
+}
+
+.shrink a {
+    color: #870202
+}
+
+
+.btn-custom-edit{
+    background-color: #F7B43A;
+    color: #fff;
+}
+
+.btn-custom-edit:hover{
+    background-color: #c4862c;
+    color: #fff;
+}
+
+.btn-custom-edit:active{
+    background-color: #c4862c;
+    color: #fff;
+}
+
+
+
+.btn-custom-proceed{
+    background-color: #49CC1E;
+    color: #fff;
+}
+
+.btn-custom-proceed:hover{
+    background-color: #44BE1D;
+    color: #fff;
+}
+
+.btn-custom-proceed:active{
+    background-color: #44BE1D;
+    color: #fff;
+}
+
+
+
+
+.btn-primary {
+    background: #3F79FF;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #1A48B2;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+
+#content{
+    margin-top: 60px;
+}
+
+#header-image{
+    position: relative;
+    width: 100%
+}
+
+#header-image img{
+    width: 100%;
+}
+
+
+.text-in-header{
+    position: absolute;
+    text-align: center;
+    top: 24%;
+    width: 100%
+}
+
+#header-image h1{
+    color: #870202;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+#header-image h3{
+    color: #870202;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.tile{
+    text-align: center;
+    background: darkgrey;
+    height: 280px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: black;
+
+}
+
+.tile-link:hover {
+    text-decoration: none;
+}
+
+.tile:hover{
+    color: #FFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    cursor:pointer
+
+}
+
+.blurb{
+    padding-top: 70px;
+}
+
+.blurb:hover{
+
+}
+
+#dj_img:hover{
+    background-image: url("../assets/gifs/dj_cat.gif ");
+    background-size: 100%;
+}
+
+#diet_img:hover{
+    background-image: url("../assets/gifs/diet2.gif ");
+    background-size: auto 100%;
+
+}
+
+#other_img:hover{
+    background-image: url("../assets/gifs/diet2.gif ");
+
+
+}
+
+.title-bar{
+    text-align: center;
+}
+
+
