@@ -1,1 +1,150 @@
-my page
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Devon D'Apuzzo</title>
+    <meta name="description" content="Devon D'Apuzzo's Personal Webpage">
+    <meta name="author" content="DevonDapuzzo">
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+
+<header>
+    <nav class="navbar-fixed-top navbar " id="navbar">
+        <div class="container">
+
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id='navbar-title' href="#header-image">Devon D'Apuzzo</a>
+            </div>
+
+
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a class="navbar-link" href="#cv">CV</a></li>
+                    <li><a class="navbar-link" href="#references">References</a></li>
+                    <li><a class="navbar-link" href="#courses">Courses</a></li>
+                    <li><a class="navbar-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+</header>
+
+<body>
+    <div id="header-image">
+        <img src="/assets/images/chicago_edited.jpg" />
+        <div class="text-in-header">
+            <h1>
+                Devon D'Apuzzo
+            </h1>
+            <h3>
+                {insert clever tagline here}
+            </h3>
+        </div>
+
+    </div>
+
+    <div class="title-bar">
+        <div class="container">
+            <h1>
+                Previous Work
+            </h1>
+        </div>
+
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/autoDJ/index.html" class="tile-link">
+                        <div class="tile" id="dj_img">
+                            <div class="blurb">
+                                <h1>
+                                    Auto DJ
+                                </h1>
+                                <p>
+                                    Automatic DJ software project page for Music Processing course
+                                </p>
+                            </div>
+                        </div>
+
+                    </a>
+
+
+                </div>
+                <div class="col-md-4" >
+                    <a href="/eliminationDiet/" class="tile-link">
+                        <div class="tile" id="diet_img">
+                            <div class="blurb">
+                                <h1>
+                                    Elimination Diet
+                                </h1>
+                                <p>
+                                    iOS Application mockup for HCI class written in HTML/CSS/Javascript
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="tile" id="other_img">
+                        <div class="blurb">
+                            <h1>
+                                Elimination Diet
+                            </h1>
+                            <p>
+                                Application mockup for HCI class
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+
+
+<script type = "text/javascript" src="bower_components/angular/angular.js"></script>
+<script type = "text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type = "text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type = "text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('nav').addClass('shrink');
+        } else {
+            $('nav').removeClass('shrink');
+        }
+    });
+
+</script>
+</html>
