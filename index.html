@@ -15,39 +15,44 @@
 </head>
 
 
-<header>
-    <nav class="navbar-fixed-top navbar " id="navbar">
-        <div class="container">
 
-            <div class="navbar-header navbar-left">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" id='navbar-title' href="#header-image">Devon D'Apuzzo</a>
+<body ng-app="app" ng-controller="appController">
+
+
+
+    <header>
+        <nav class="navbar-fixed-top navbar " id="navbar">
+            <div class="container">
+
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id='navbar-title' href="#header-image">Devon D'Apuzzo</a>
+                </div>
+
+
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="navbar-link" href="#about">About Me</a></li>
+                        <li><a class="navbar-link" href="./assets/pdfs/resume.pdf">CV</a></li>
+                        <li><a class="navbar-link" href="#references">References</a></li>
+                        <li><a class="navbar-link" href="#courses">Courses</a></li>
+                        <li><a class="navbar-link" href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
             </div>
 
+        </nav>
+    </header>
 
 
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li><a class="navbar-link" href="./assets/pdfs/resume.pdf">CV</a></li>
-                    <li><a class="navbar-link" href="#references">References</a></li>
-                    <li><a class="navbar-link" href="#courses">Courses</a></li>
-                    <li><a class="navbar-link" href="#portfolio">Portfolio</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div>
-
-    </nav>
-</header>
-
-<body>
     <div id="header-image">
         <img src="./assets/images/chicago_edited.jpg" />
         <div class="text-in-header">
@@ -61,18 +66,25 @@
 
     </div>
 
-    <div class="title-bar">
-        <div class="container">
-            <h1>
-                Previous Work
-            </h1>
-        </div>
 
-    </div>
-    <div id="portfolio">
+    <div class="section" id="portfolio">
         <div class="container">
+            <div class="title-bar">
+                    <h1>
+                        Portfolio
+                    </h1>
+
+            </div>
+
             <div class="row">
-                <div class="col-md-4">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
                     <a href="./autoDJ" class="tile-link">
                         <div class="tile" id="dj_img">
                             <div class="blurb">
@@ -84,18 +96,16 @@
                                 </p>
                             </div>
                         </div>
-
                     </a>
-
-
                 </div>
-                <div class="col-md-4" >
+                <div class="col-sm-6 col-md-4" >
                     <a href="./eliminationDiet" class="tile-link">
                         <div class="tile" id="diet_img">
                             <div class="blurb">
                                 <h1>
                                     Elimination Diet
                                 </h1>
+
                                 <p>
                                     iOS Application mockup for HCI class written in HTML/CSS/Javascript
                                 </p>
@@ -103,27 +113,127 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="tile" id="other_img">
+                <div class="col-sm-6 col-md-4">
+                    <div class="tile" id="diet_img">
                         <div class="blurb">
                             <h1>
-                                Elimination Diet
+                                Something Else
                             </h1>
                             <p>
-                                Application mockup for HCI class
+                                Some other project I did
                             </p>
                         </div>
-
-
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+
+    <div class="section" id="resume">
+        <div class="container">
+
+            <div class="resume-section">
+                <div class="row">
+                        <h2>
+                            Education
+                        </h2>
+                </div>
+                <hr/>
+                <div ng-repeat="school in schools">
+                    <div class="row resume-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{school.name}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p>
+                                {{school.start}} to {{school.end}}   |   {{school.location}}
+                            </p>
+
+                            <p ng-if="school.major">
+                                <span class="resume-label">
+                                    Major:
+                                </span>
+                                {{school.major}}
+                            </p>
+                            <p ng-if="school.certificate">
+                                <span class="resume-label">
+                                    Certificate:
+                                </span>
+                                {{school.certificate}}
+                            </p>
+                            <div ng-if="school !== schools[schools.length-1]">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div>
 
+            <div class="resume-section">
+                <div class="row">
+                        <h2>
+                           Work Experience
+                        </h2>
+                </div>
+                <hr/>
+                <div ng-repeat="job in jobs">
+                    <div class="row resume-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{job.name}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p>
+                                  {{job.start}} to {{job.end}}   |   {{job.location}}
+                            </p>
+                            <p>
+                                <span class="resume-label">
+                                    Title:
+                                </span>
+                                {{job.title}}
+                            </p>
+                            <hr>
+                            <p>
+                                {{job.description}}
+                            </p>
+                            <div ng-if="job !== jobs[jobs.length-1]">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
+
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="title-bar">
+                <h1>
+                    Contact Me
+                </h1>
+
+            </div>
+
+            <div class="row">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
 
 </body>
 
@@ -131,11 +241,19 @@
 
 
 
+<!--Dependencies-->
 
-<script type = "text/javascript" src="bower_components/angular/angular.js"></script>
-<script type = "text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-<script type = "text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<script type = "text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type = "text/javascript" src="./bower_components/angular/angular.js"></script>
+<script type = "text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+<script type = "text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+<script type = "text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<!--My Javascript-->
+
+
+<script type = "text/javascript" src="./app/app.module.js"></script>
+<script type = "text/javascript" src="./app/app.controller.js"></script>
 
 <script>
     $(window).scroll(function() {
