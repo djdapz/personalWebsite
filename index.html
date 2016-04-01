@@ -34,17 +34,19 @@
                     <a class="navbar-brand" id='navbar-title' href="#header-image">Devon D'Apuzzo</a>
                 </div>
 
-
+                <!--TODO smooth scroll to each HREF-->
+                <!-- TODO Fix navbar for smaller windows -->
 
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="navbar-link" href="#about">About Me</a></li>
-                        <li><a class="navbar-link" href="./assets/pdfs/resume.pdf">CV</a></li>
-                        <li><a class="navbar-link" href="#references">References</a></li>
-                        <li><a class="navbar-link" href="#courses">Courses</a></li>
-                        <li><a class="navbar-link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="navbar-link" href="#about">ABOUT ME</a></li>
+                        <li><a class="navbar-link" href="#resume">RESUME</a></li>
+                        <li><a class="navbar-link" href="#references">REFERENCES</a></li>
+                        <li><a class="navbar-link" href="#testScroll">COURSES</a></li>
+                        <li><a class="navbar-link" href="#portfolio">PORTFOLIO</a></li>
+                        <li><a class="navbar-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
@@ -67,7 +69,51 @@
     </div>
 
 
-    <div class="section" id="portfolio">
+    <div class="section" id="my-about">
+        <div class="scroll-to-patch" id="about">
+        </div>
+        <div class="container">
+            <div class="title-bar">
+                <h1>
+                    About Me
+                </h1>
+
+            </div>
+
+            <div class="row">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./assets/images/devon.jpg"/>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        Deep v mustache art party, vinyl sriracha est blue bottle. Pour-over kombucha chillwave, helvetica freegan drinking vinegar schlitz street art excepteur fixie et. Leggings brunch humblebrag roof party quinoa et. Marfa polaroid squid beard, shoreditch sunt blog cupidatat venmo affogato assumenda freegan letterpress before they sold out duis. Occupy lomo qui enim gochujang, vero umami butcher before they sold out labore. Actually tempor kitsch, normcore sed magna skateboard culpa consectetur man bun. VHS health goth distillery, waistcoat PBR&B green juice ennui ex sunt cupidatat tofu.
+                    </p>
+                    <p>
+                        Polaroid elit sed mollit, duis truffaut mixtape. Readymade chia street art keffiyeh, anim aute irony fanny pack selfies delectus DIY man braid pour-over godard letterpress. Fixie franzen pop-up enim raw denim plaid. Proident twee etsy neutra blue bottle trust fund franzen, 3 wolf moon aliqua mollit kogi. Selvage cliche plaid nisi brunch. Nesciunt etsy pickled taxidermy humblebrag poutine nihil. Voluptate nulla sed ad nihil, aute sartorial chia sustainable 90's.
+                    </p>
+                    <p>
+                        Pinterest retro listicle twee, hashtag echo park ramps artisan migas seitan bespoke try-hard. Taxidermy art party mixtape, umami fanny pack hoodie banh mi leggings wolf small batch. Butcher bicycle rights intelligentsia vinyl mlkshk gochujang mumblecore pop-up, heirloom pabst whatever VHS letterpress flexitarian. Selvage poutine photo booth pinterest 3 wolf moon retro vegan. Banh mi tilde letterpress, celiac bespoke biodiesel typewriter meggings fap food truck wolf knausgaard gastropub aesthetic polaroid. You probably haven't heard of them hoodie literally stumptown truffaut thundercats ugh, tofu whatever hashtag blue bottle squid ethical selfies. Mustache banh mi pickled, beard kogi ramps stumptown gluten-free bushwick intelligentsia DIY tattooed deep v.
+                    </p>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="section" id="my-portfolio">
+        <div class="scroll-to-patch"id="portfolio">
+        </div>
         <div class="container">
             <div class="title-bar">
                     <h1>
@@ -114,13 +160,13 @@
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-4">
-                    <div class="tile" id="diet_img">
+                    <div class="tile" id="other_img">
                         <div class="blurb">
                             <h1>
-                                Something Else
+                                Tripodium System
                             </h1>
                             <p>
-                                Some other project I did
+                                Award-Winning Design Thinking & Communication final project
                             </p>
                         </div>
                     </div>
@@ -129,16 +175,65 @@
         </div>
     </div>
 
-
-
-    <div class="section" id="resume">
+    <div class="section" id="my-resume">
+        <div class="scroll-to-patch" id="resume">
+        </div>
         <div class="container">
 
             <div class="resume-section">
                 <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
                         <h2>
-                            Education
+                            Work Experience
                         </h2>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 col-sm-3">
+                        <h2></h2>
+                        <a class="my-button pull-right" href="./assets/pdfs/resume.pdf" target="_blank">
+                            PDF Version
+                        </a>
+                    </div>
+
+
+                </div>
+                <hr/>
+                <div ng-repeat="job in jobs">
+                    <div class="row resume-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{job.name}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p>
+                                  {{job.start}} to {{job.end}}   |   {{job.location}}
+                            </p>
+                            <p>
+                                <span class="resume-label">
+                                    Position:
+                                </span>
+                                {{job.title}}
+                            </p>
+                            <span ng-if="job.description">
+                                <hr>
+                                <p>
+                                    {{job.description}}
+                                </p>
+                            </span>
+
+                            <div ng-if="job !== jobs[jobs.length-1]">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <div class="row">
+                    <h2>
+                        Education
+                    </h2>
                 </div>
                 <hr/>
                 <div ng-repeat="school in schools">
@@ -173,39 +268,90 @@
                 </div>
             </div>
 
-
             <div class="resume-section">
                 <div class="row">
-                        <h2>
-                           Work Experience
-                        </h2>
+                    <h2>
+                        Leadership and Involvment
+                    </h2>
                 </div>
                 <hr/>
-                <div ng-repeat="job in jobs">
+                <div ng-repeat="club in clubs">
                     <div class="row resume-row">
                         <div class="col-md-3 col-md-offset-1">
                             <h3>
-                                {{job.name}}
+                                {{club.name}}
                             </h3>
                         </div>
                         <div class="col-md-7">
                             <p>
-                                  {{job.start}} to {{job.end}}   |   {{job.location}}
+                                {{club.start}} to {{club.end}}
                             </p>
-                            <p>
+
+                            <p ng-if="club.description">
+                                {{club.description}}
+                            </p>
+                            <p ng-if="club.list">
                                 <span class="resume-label">
-                                    Title:
+                                    {{club.list_title}}
                                 </span>
-                                {{job.title}}
+                                <ul>
+                                    <li ng-repeat="detail in club.list">
+                                        <span class="resume-label">
+                                            {{detail.title}}
+                                        </span>
+                                        <span ng-if="detail.description">
+                                            : {{detail.description}}
+                                        </span>
+                                    </li>
+                                </ul>
                             </p>
-                            <hr>
-                            <p>
-                                {{job.description}}
-                            </p>
-                            <div ng-if="job !== jobs[jobs.length-1]">
+                            <div ng-if="school !== schools[schools.length-1]">
                                 <br/>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <div class="row">
+                    <h2>
+                        Recognitions {coming soon}
+                    </h2>
+                </div>
+                <hr/>
+                <div class="row resume-row">
+                    <div class="col-md-3 col-md-offset-1">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="resume-section">
+                <div class="row">
+                    <h2>
+                        Skills {coming soon}
+                    </h2>
+                </div>
+                <hr/>
+                <div class="row resume-row">
+                    <div class="col-md-3 col-md-offset-1">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="resume-section">
+                <div class="row">
+                    <h2>
+                        Programming Languages {coming soon}
+                    </h2>
+                </div>
+                <hr/>
+                <div class="row resume-row">
+                    <div class="col-md-3 col-md-offset-1">
                     </div>
                 </div>
             </div>
@@ -214,7 +360,58 @@
         </div>
     </div>
 
-    <div class="section" id="contact">
+
+    <div class="section" id="my-references">
+        <div class="scroll-to-patch" id="references">
+        </div>
+        <div class="container">
+            <div class="title-bar">
+                <h1>
+                    References
+                </h1>
+
+            </div>
+
+            <div class="row">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="section" id="my-courses">
+        <div class="scroll-to-patch" id="courses">
+        </div>
+        <div class="container">
+            <div class="title-bar">
+                <h1>
+                    Courses
+                </h1>
+
+            </div>
+
+            <div class="row">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="section" id="my-contact">
+        <div class="scroll-to-patch" id="contact">
+        </div>
         <div class="container">
             <div class="title-bar">
                 <h1>
@@ -228,7 +425,6 @@
                     <hr/>
                 </div>
             </div>
-
 
         </div>
     </div>
@@ -254,15 +450,6 @@
 
 <script type = "text/javascript" src="./app/app.module.js"></script>
 <script type = "text/javascript" src="./app/app.controller.js"></script>
+<script type = "text/javascript" src="./js/jqueryComponents.js"></script>
 
-<script>
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $('nav').addClass('shrink');
-        } else {
-            $('nav').removeClass('shrink');
-        }
-    });
-
-</script>
 </html>

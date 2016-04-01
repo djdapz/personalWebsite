@@ -27,6 +27,7 @@ p, div {
     border-color: transparent;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
+    min-height: 40px !important;
 }
 
 .navbar a {
@@ -35,16 +36,25 @@ p, div {
     transition: all .7s ease;}
 
 
-
 .shrink{
-    background:rgba(255,255,255,0.5)
+    background:rgba(255,255,255,0.5);
+    height: 40px !important;
 
 }
 
 .shrink a {
-    color: #870202
+    color: #870202;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
+
+.scroll-to-patch{
+    position: relative;
+    top: -40px;
+    height: 40px;
+    visibility: hidden;
+}
 
 .btn-primary {
     background: #3F79FF;
@@ -99,8 +109,51 @@ p, div {
 
 .section{
     padding-bottom:50px;
-    padding-top: 20px;
 }
+
+.section .container{
+    margin-top: -25px;
+}
+
+
+
+#my-about{
+    background-color: #f0f0f0;
+}
+
+#my-portfolio{
+    background-color: #ffffff;
+}
+
+#my-resume{
+    background-color: #C5BBDA;
+}
+
+#my-references{
+    background-color: #f0f0f0;
+}
+
+#my-courses{
+    background-color: #ffffff;
+}
+
+#my-contact{
+    background-color: #C5BBDA;
+}
+
+
+
+
+/*About Me Styles*/
+#my-about img{
+    width:100%
+}
+
+#my-about hr{
+    border-top: 1px solid white;
+}
+
+
 
 
 
@@ -142,7 +195,8 @@ p, div {
 }
 
 #other_img:hover{
-    background-image: url("../assets/gifs/diet2.gif ");
+    background-image: url("../assets/gifs/engineering.gif ");
+    background-size: 100% 100%;
 
 
 }
@@ -158,9 +212,47 @@ p, div {
 }
 
 
-#resume{
-    background-color: #C5BBDA;
+.my-button{
+    border: solid #FFF;
+    border-width: 1px;
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    color: white;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;
+
 }
+
+.my-button:hover{
+    background-color: white;
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.my-button:active{
+    background-color: whitesmoke;
+    color: grey;
+    text-decoration: none;
+}
+
+.my-button:focus{
+    color: grey;
+    background-color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
 
 .resume-section{
     text-align: center
@@ -182,6 +274,10 @@ p, div {
 
 }
 
+.resume-section li{
+    text-align: left;
+}
+
 .resume-label{
     font-weight: bold;
 }
@@ -195,7 +291,7 @@ p, div {
     margin-top: 3px;
     margin-bottom: 3px;
 }
-}
+
 
 @media(max-width: 992px){
     .resume-section h3{
@@ -212,4 +308,11 @@ p, div {
         text-align: center;
 
     }
+
+    .resume-row hr{
+        width: 50%
+    }
+
+
 }
+

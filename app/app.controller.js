@@ -46,7 +46,7 @@ var appController = function($scope){
             end: "September 2015",
             location: "Boulder, CO",
             title: "Software Development Intern",
-            description: "Software Development Intern. Worked as part of a team to develop an In-House application. Primarily worked with Angular.JS and Java(Spring Framework). Also worked with Oracle SQL and git."
+            description: "Worked as part of a team to develop an In-House application. Primarily worked with Angular.JS and Java(Spring Framework). Also worked with Oracle SQL and git."
         },
         {
             name: "Encision Inc.",
@@ -54,7 +54,7 @@ var appController = function($scope){
             end: "April 2015",
             location: "Boulder, CO",
             title: "Marketing Intern",
-            description: "Marketing Intern. Wrote, filmed, produced, and edited multiple product videos, created centralized database for company sales force, created and distributed launch books for a new product, assisted Encision co-founder and VP of Technology with lab research."
+            description: "Wrote, filmed, produced, and edited multiple product videos, created centralized database for company sales force, created and distributed launch books for a new product, assisted Encision co-founder and VP of Technology with lab research."
         },
         {
             name: "Studio N",
@@ -72,6 +72,79 @@ var appController = function($scope){
             title: "Office Intern",
             description: "Worked as an Intern preforming office tasks, research, confirming trades, and assisting back office"
         }
+
+    ]
+
+    $scope.clubs = [
+        {
+            name: "Delta Tau Delta Fraternity",
+            start: "Winter 2014",
+            end: "present",
+            description: "Active brother and leader in the chapter. Leadership discussed in leadership section",
+            list_title: "Positions",
+            list: [
+                {
+                    title: "Guide",
+                    description: "Holds a seat on the Executive Board and is in charge of the ritual, initiation, and secrets of the fraternity"
+                },
+                {
+                    title: "Brotherhood Chair",
+                    description: " Holds a seat on the Administrative Board and is responsible for all programming promoting comradery and brotherhood"
+                },
+                {
+                    title: "Housing Chair",
+                    description: " Independent position responsible for managing the house and acting as a liaison between the chapter and our housing corporation"
+                }
+            ]
+        },
+        {
+            name: "Peer Leader",
+            start: "Fall 2011",
+            end: "Spring 2013",
+            description: "Advised and mentored a group of incoming Alexander Dawson School freshmen throughout the year.",
+            list_title: undefined,
+            list: undefined
+        },
+        {
+            name: "Conduct Comittee",
+            start: "Fall 2010",
+            end: "Spring 2012",
+            description: "Elected by peers to serve on the Alexander Dawson School disciplinary committee run by students and faculty.",
+            list_title: undefined,
+            list: undefined
+        },
+        {
+            name: "Form & Function Marketing",
+            start: "Fall 2014",
+            end: "present",
+            description: "Member of student-run marketing consulting group. Formulated and executed marketing plans for local businesses, student groups and charities.",
+            list_title: "Clients",
+            list: [
+                {
+                    title: "Salmon Cove"
+                },
+                {
+                    title: "Honor Flight Chicago"
+                },
+                {
+                    title: "LYFE Kitchen"
+                },
+                {
+                    title: "Kohl's Children Museum"
+                }
+            ]
+        },
+        {
+            name: "Northwestern Sketch Television",
+            start: "Fall 2013",
+            end: "Spring 2014",
+            description: "Associate Producer",
+            list_title: undefined,
+            list: undefined
+        }
+
+
+
 
     ]
 
