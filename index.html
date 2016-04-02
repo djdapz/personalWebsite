@@ -181,18 +181,27 @@
         </div>
         <div class="container">
 
-            <div class="resume-section">
+            <div class="title-bar row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <h1>
+                        Rèsumè
+                    </h1>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a class="my-button" href="./assets/pdfs/resume.pdf" target="_blank">
+                        PDF Version
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="resume-section" id="top-resume-section">
                 <div class="row">
-                    <div class="col-xs-6 col-xs-offset-3">
+                    <div class="col-md-4">
                         <h2>
-                            Work Experience
+                            WORK EXPERIENCE
                         </h2>
-                    </div>
-                    <div class="col-md-2 col-md-offset-1 col-sm-3">
-                        <h2></h2>
-                        <a class="my-button pull-right" href="./assets/pdfs/resume.pdf" target="_blank">
-                            PDF Version
-                        </a>
                     </div>
 
 
@@ -232,9 +241,11 @@
 
             <div class="resume-section">
                 <div class="row">
-                    <h2>
-                        Education
-                    </h2>
+                    <div class="col-md-4">
+                        <h2>
+                            EDUCATION
+                        </h2>
+                    </div>
                 </div>
                 <hr/>
                 <div ng-repeat="school in schools">
@@ -246,18 +257,19 @@
                         </div>
                         <div class="col-md-7">
                             <p>
-                                {{school.start}} to {{school.end}}   |   {{school.location}}
+                                {{school.start}} to {{school.end}}  |  {{school.location}}
                             </p>
+
 
                             <p ng-if="school.major">
                                 <span class="resume-label">
-                                    Major:
+                                    MAJOR:
                                 </span>
                                 {{school.major}}
                             </p>
                             <p ng-if="school.certificate">
                                 <span class="resume-label">
-                                    Certificate:
+                                    CERTIFICATE:
                                 </span>
                                 {{school.certificate}}
                             </p>
@@ -269,11 +281,17 @@
                 </div>
             </div>
 
+
+
             <div class="resume-section">
                 <div class="row">
-                    <h2>
-                        Leadership and Involvment
-                    </h2>
+                    <div class="col-md-4">
+                        <h2>
+                           LEADERSHIP AND INVOLVEMENT
+                        </h2>
+
+                    </div>
+
                 </div>
                 <hr/>
                 <div ng-repeat="club in clubs">
@@ -314,48 +332,109 @@
                 </div>
             </div>
 
+
             <div class="resume-section">
                 <div class="row">
-                    <h2>
-                        Recognitions {coming soon}
-                    </h2>
+                    <div class="col-md-4">
+                        <h2>
+                            RECOGNITIONS
+                        </h2>
+                    </div>
                 </div>
                 <hr/>
-                <div class="row resume-row">
-                    <div class="col-md-3 col-md-offset-1">
+                <div ng-repeat="award in awards">
+                    <div class="row resume-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{award.name}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7">
+                            <p>
+                                {{award.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="resume-section">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>
+                            PROGRAMMING LANGUAGES
+                        </h2>
+                    </div>
+                </div>
+                <hr/>
+                <div ng-repeat="language in languages">
+                    <div class="row resume-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{language.name}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7 col-xs-4 col-xs-offset-4 col-md-offset-0">
+                            <div class="star-section">
+                                <span  ng-repeat="star in language.stars" >
+                                    <span class="glyphicon glyphicon-star" ng-if="star >0">
+                                    </span>
+                                    <span class="glyphicon glyphicon-star-empty" ng-if="star <0">
+                                    </span>
+                                </span>
+                            </div>
+
+                            <!--TODO Make the frameworks collapsable -->
+                            <div ng-if="language.frameworks">
+                                <h4>
+                                    Frameworks:
+                                </h4>
+                                <div ng-repeat="fw in language.frameworks" class="row">
+                                    <div class="col-md-2 col-md-offset1 col-xs-12">
+                                        <p>
+                                            {{fw.name}}
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-5 col-xs-12">
+                                        <div class="star-section">
+                                            <span  ng-repeat="star in fw.stars" >
+                                            <span class="glyphicon glyphicon-star" ng-if="star >0">
+                                            </span>
+                                            <span class="glyphicon glyphicon-star-empty" ng-if="star <0">
+                                            </span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
+
             <div class="resume-section">
                 <div class="row">
-                    <h2>
-                        Skills {coming soon}
-                    </h2>
+                    <div class="col-md-4">
+                        <h2>
+                            TECHNOLOGIES AND SKILLS
+                        </h2>
+                    </div>
                 </div>
                 <hr/>
-                <div class="row resume-row">
-                    <div class="col-md-3 col-md-offset-1">
-
+                <div ng-repeat="skill in skills">
+                    <div class="row resume-row">
+                        <div class="col-md-7 col-md-offset-4">
+                            <h4>
+                                {{skill.name}}
+                            </h4>
+                        </div>
                     </div>
                 </div>
             </div>
 
-
-            <div class="resume-section">
-                <div class="row">
-                    <h2>
-                        Programming Languages {coming soon}
-                    </h2>
-                </div>
-                <hr/>
-                <div class="row resume-row">
-                    <div class="col-md-3 col-md-offset-1">
-                    </div>
-                </div>
-            </div>
 
 
         </div>

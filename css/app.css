@@ -122,7 +122,7 @@ p, div {
 }
 
 #my-portfolio{
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 #my-resume{
@@ -211,14 +211,14 @@ p, div {
     margin-left: auto
 }
 
-
 .my-button{
     border: solid #FFF;
     border-width: 1px;
     height: 30px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     color: white;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -251,22 +251,35 @@ p, div {
 
 
 
-
+#top-resume-section{
+    margin-top: 0px;
+}
 
 
 .resume-section{
-    text-align: center
+    text-align: left;
+    margin-top: 50px;
 }
 
+.resume-section h1{
+    text-align: left;
+}
+
+.resume-section h2{
+    color: white;
+    text-align: right;
+}
 
 .resume-section h3{
     text-align: right;
     margin-top: 0px;
 }
 
-.resume-section h1{
-    text-align: left;
+.resume-section h5{
+    text-align: right;
 }
+
+
 
 .resume-section p{
     margin-bottom: 3px;
@@ -293,6 +306,7 @@ p, div {
 }
 
 
+
 @media(max-width: 992px){
     .resume-section h3{
         text-align: center;
@@ -303,15 +317,26 @@ p, div {
         text-align: center;
     }
 
+    .resume-section h4{
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
     .resume-section p{
         margin-bottom: 3px;
         text-align: center;
-
     }
 
     .resume-row hr{
         width: 50%
     }
+    .star-section{
+        margin-right: auto;
+        width: 85px;
+        margin-left: auto;
+    }
+
+
 
 
 }

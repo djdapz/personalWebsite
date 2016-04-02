@@ -146,7 +146,133 @@ var appController = function($scope){
 
 
 
+    ];
+
+    $scope.awards = [
+        {
+            name: "Dean's List",
+            description: "Placed on Northwestern University's Dean's list 3 times: Spring 2014, Fall 2014, and Spring 2015"
+        },
+        {
+            name: "Excellence in Design",
+            description: "My four-person group’s design was recognized for excellence in design at Northwestern University’s Design Expo."
+        }
+    ];
+
+    $scope.languages = [
+        {
+            name: "C++",
+            proficiency: 4,
+            frameworks: [
+                {
+                    name: "openGL",
+                    proficiency:2
+                }
+            ]
+        },
+        {
+            name: "Javascript",
+            proficiency: 5,
+            frameworks: [
+                {
+                    name: "Angular",
+                    proficiency:5
+                },
+                {
+                    name: "Node",
+                    proficiency:3
+                },
+                {
+                    name: "Express",
+                    proficiency:3
+                }
+            ]
+        },
+        {
+            name: 'Python',
+            proficiency: 3,
+            frameworks: undefined
+        },
+        {
+            name: "HTML5/CSS3",
+            proficiency: 5,
+            frameworks: undefined
+        },
+        {
+            name: "Java",
+            proficiency: 3,
+            frameworks: [
+                {
+                    name: "Spring",
+                    proficiency: 2
+                }
+            ]
+        }
+
     ]
+
+    $scope.skills = [
+        {
+            name: "SQL"
+        },
+        {
+            name: 'Git'
+        },
+        {
+            name: "Object Oriented Programming"
+        },
+        {
+            name: "User Centered Design"
+        },
+        {
+            name: "Data Structures"
+        },
+        {
+            name: "Machine Learning Techniques"
+        },
+        {
+            name: "Audio Processing"
+        },
+        {
+            name: "Graphic Design (Photoshop and Illustrator)"
+        }
+    ]
+
+
+    var init = function(){
+        for(var i = 0; i<$scope.languages.length; i++){
+            setUpStars($scope.languages[i]);
+            console.log($scope.languages[i].name)
+            if($scope.languages[i].frameworks != undefined) {
+                for (var j = 0; j < $scope.languages[i].frameworks.length; j++) {
+                    setUpStars($scope.languages[i].frameworks[j]);
+                }
+            }
+
+        }
+    };
+
+    var setUpStars = function(object){
+        var s = object.proficiency;
+        var n = 5 -s;
+        var arr = []
+        for(var i = 1; i<=s; i++){
+            arr.push(i)
+        }
+        for(var i = 1; i<=n; i++){
+            arr.push(i*-1)
+        }
+        object.stars = arr;
+        return object;
+    };
+
+    init();
+
+    $scope.lookIn = function(){
+        1+1;
+    }
+
+
 
 };
 
