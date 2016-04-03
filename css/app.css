@@ -251,43 +251,43 @@ p, div {
 
 
 
-#top-resume-section{
+#top-detail-section{
     margin-top: 0px;
 }
 
 
-.resume-section{
+.detail-section{
     text-align: left;
     margin-top: 50px;
 }
 
-.resume-section h1{
+.detail-section h1{
     text-align: left;
 }
 
-.resume-section h2{
+.detail-section h2{
     color: white;
     text-align: right;
 }
 
-.resume-section h3{
+.detail-section h3{
     text-align: right;
     margin-top: 0px;
 }
 
-.resume-section h5{
+.detail-section h5{
     text-align: right;
 }
 
 
 
-.resume-section p{
+.detail-section p{
     margin-bottom: 3px;
     text-align: left;
 
 }
 
-.resume-section li{
+.detail-section li{
     text-align: left;
 }
 
@@ -295,41 +295,46 @@ p, div {
     font-weight: bold;
 }
 
-.resume-row{
+.detail-row{
     margin-bottom: 20px
 }
 
-.resume-row hr{
+.detail-row hr{
     border-top: 1px solid grey;
     margin-top: 3px;
     margin-bottom: 3px;
 }
 
+#my-courses .detail-section h2{
+    color: black;
+}
+
 
 
 @media(max-width: 992px){
-    .resume-section h3{
+    .detail-section h3{
         text-align: center;
         margin-top: 0px;
     }
 
-    .resume-section h2{
+    .detail-section h2{
         text-align: center;
     }
 
-    .resume-section h4{
+    .detail-section h4{
         margin-bottom: 3px;
         text-align: center;
     }
 
-    .resume-section p{
+    .detail-section p{
         margin-bottom: 3px;
         text-align: center;
     }
 
-    .resume-row hr{
+    .detail-row hr{
         width: 50%
     }
+
     .star-section{
         margin-right: auto;
         width: 85px;

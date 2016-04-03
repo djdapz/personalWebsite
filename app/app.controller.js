@@ -236,7 +236,170 @@ var appController = function($scope){
         {
             name: "Graphic Design (Photoshop and Illustrator)"
         }
-    ]
+    ];
+
+
+    $scope.cs = [
+        {
+            number: 111,
+            title: "Fundamentals to Computer Programming 1",
+            technology: "Meta"
+        },
+        {
+            number: 211,
+            title: "Fundamentals to Computer Programming 2",
+            technology: "C++"
+        },
+        {
+            number: 212,
+            title: "Mathamatic Foundations of Computer Science"
+        },
+        {
+            number: 213,
+            title: "Computer Systems",
+            technology: "UNIX, C"
+        },
+        {
+            number: 214,
+            title: "Data Structures and Algorithms",
+            technology: "C#"
+        },
+        {
+            number: 195,
+            title: "Introduction to Robotics Laboratory",
+            technology: "Python, ROS"
+        },
+        {
+            number: 330,
+            title: "Human Computer Interaction",
+            technology: "HTML5, CSS3, Javascript"
+        },
+        {
+            number: "3XX",
+            title: "Computer Graphics(Level 11)**",
+            technology: "C++, OpenGL"
+        },
+        {
+            number: "3XX",
+            title: "Database Systems**",
+            technology: "PostgreSQL"
+        },
+        {
+            number: 352,
+            title: "Machine Perception of Music and Audio",
+            technology: "Python"
+        },
+        {
+            number: 348,
+            title: "Introduction to Artificial Intelligence",
+            technology: "Python"
+        },
+        {
+            number: 349,
+            title: "Machine Learning",
+            technology: "Python"
+        }
+
+    ];
+
+    $scope.technical = [
+        {
+            dept: "Engineering",
+            number: "205-1",
+            title: "Engineering Analysis 1",
+            description: "Linear Algebra, MATLAB Programming"
+        },
+        {
+            dept: "Engineering",
+            number: "205-2",
+            title: "Engineering Analysis 2",
+            description: "Mechanics, Stress & Strain"
+        },
+        {
+            dept: "Engineering",
+            number: "205-3",
+            title: "Engineering Analysis 3",
+            description: "Dynamics, Introduction to Differential Equations"
+        },
+        {
+            dept: "Design",
+            number: "106-1",
+            title: "Design Thinking & Communication 1"
+
+        },
+        {
+            dept: "Design",
+            number: "106-2",
+            title: "Design Thinking & Communication 2"
+        },
+        {
+            dept: "Math",
+            number: "230",
+            title: "Multivariable Differential Calculus"
+        },
+        {
+            dept: "Math",
+            number: "234",
+            title: "Multivariable Integration and Vector Calculus"
+        },
+        {
+            dept: "IEMS",
+            number: "202",
+            title: "Probability"
+        },
+        {
+            dept: "IEMS",
+            number: "303",
+            title: "Statistics"
+        },
+        {
+            dept: "RTVF",
+            number: "202",
+            title: "Analysis of Media Text"
+        },
+        {
+            dept: "History",
+            number: "2XX",
+            title: "Medieval Scottish History**"
+        },
+        {
+            dept: "Earth Science",
+            number: "2XX",
+            title: "Earth Dynamics**"
+        }
+    ];
+
+
+    $scope.econ = [
+        {
+            number: 201,
+            title: "Intro to Microeconomics"
+        },
+        {
+            number: 201,
+            title: "Intro to Macroeconomics"
+        },
+        {
+            number: "310-1",
+            title: "Intermediate Microeconomics 1"
+        },
+        {
+            number: "310-2",
+            title: "Intermediate Microeconomics 2"
+        },
+        {
+            number: 311,
+            title: "Intermediate Macroeconomics"
+        },
+        {
+            number: "381-1",
+            title: "Applied Econometrics 1"
+        },
+        {
+            number: "381-2",
+            title: "Applied Econometrics 2"
+        }
+    ];
 
 
     var init = function(){
