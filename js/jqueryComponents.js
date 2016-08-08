@@ -10,19 +10,3 @@ $(window).scroll(function() {
     }
 });
 
-
-//functions to offset the navbar
-////todo make this more reliable
-//function offsetAnchor() {
-//    if(location.hash.length !== 0) {
-//        window.scrollTo(window.scrollX, window.scrollY - 40);
-//    }
-//}
-//
-//$(window).on("hashchange", function () {
-//    offsetAnchor();
-//});
-//
-//window.setTimeout(function() {
-//    offsetAnchor();
-//}, 1);

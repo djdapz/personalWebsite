@@ -139,6 +139,21 @@ p, div {
 
 #my-contact{
     background-color: #C5BBDA;
+    padding-bottom:0px;
+}
+
+span[class*="glyphicon-one-dot"] {
+    margin-bottom: -.8em;
+    overflow: hidden;
+}
+
+.glyphicon-one-dot-full:before {
+    content:"\25cf";
+    font-size: 3em;
+}
+.glyphicon-one-dot-emptyt:before {
+    content:"\25cb";
+    font-size: 3em;
 }
 
 
@@ -191,14 +206,16 @@ p, div {
 #diet_img:hover{
     background-image: url("../assets/gifs/diet2.gif ");
     background-size: auto 100%;
-
 }
 
 #other_img:hover{
     background-image: url("../assets/gifs/engineering.gif ");
     background-size: 100% 100%;
+}
 
-
+#concert_img:hover{
+    background-image: url("../assets/gifs/concert.gif ");
+    background-size: 100% 100%;
 }
 
 .title-bar{
@@ -272,8 +289,14 @@ p, div {
 
 .detail-section h3{
     text-align: right;
+    margin-bottom: 0px;
     margin-top: 0px;
 }
+
+.detail-section h4{
+     text-align: right;
+     margin-top: 0px;
+ }
 
 .detail-section h5{
     text-align: right;
@@ -283,7 +306,7 @@ p, div {
 
 .detail-section p{
     margin-bottom: 3px;
-    text-align: left;
+    text-align: right;
 
 }
 
@@ -305,8 +328,25 @@ p, div {
     margin-bottom: 3px;
 }
 
+.detail-row p{
+    text-align: left;
+}
+
 #my-courses .detail-section h2{
     color: black;
+}
+
+#programming-languages-section .row{
+    margin: 0
+}
+
+.programming-language-row{
+    margin-bottom: 20px;
+}
+
+
+.icon-link img{
+    height: 70px;
 }
 
 

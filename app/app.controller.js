@@ -10,7 +10,7 @@ var appController = function($scope){
             special: undefined,
             gpa: 3.626,
             location: "Evanston, IL",
-            major: "Computer Science, Economics",
+            major: "Computer Science AND Economics",
             certificate: "Kellogg Financial Economics Certificate"
         },
         {
@@ -38,7 +38,8 @@ var appController = function($scope){
             start: "June 2016",
             end: "August 2016",
             location: "Chicago, IL",
-            title: "Incoming Software Development Engineering Intern"
+            title: "Software Development Engineering Intern",
+            description: "Software Development Engineering Intern. Worked as part of the travel packages team on Expedia’s core codebase. Used the following technologies: Java, Spring, FTLs, Handlebars, Ember, Backbone, Less, Perforce."
         },
         {
             name: "Level 3 Communications",
@@ -175,7 +176,7 @@ var appController = function($scope){
             proficiency: 5,
             frameworks: [
                 {
-                    name: "Angular",
+                    name: "Angular 1",
                     proficiency:5
                 },
                 {
@@ -185,6 +186,13 @@ var appController = function($scope){
                 {
                     name: "Express",
                     proficiency:3
+                },{
+                    name: "Backbone",
+                    proficiency:2
+                },
+                {
+                    name: "Ember",
+                    proficiency:2
                 }
             ]
         },
@@ -196,7 +204,12 @@ var appController = function($scope){
         {
             name: "HTML5/CSS3",
             proficiency: 5,
-            frameworks: undefined
+            frameworks: [
+                {
+                    name: "LESS",
+                    proficiency: 2
+                }
+            ]
         },
         {
             name: "Java",
@@ -217,6 +230,9 @@ var appController = function($scope){
         },
         {
             name: 'Git'
+        },
+        {
+            name: 'Perforce'
         },
         {
             name: "Object Oriented Programming"
