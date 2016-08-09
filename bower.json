@@ -5,6 +5,7 @@
   ],
   "description": "Personal website",
   "main": "index.html",
+  "directory": "/public/bower_components",
   "moduleType": [],
   "license": "MIT",
   "homepage": "http://devon.dapuzzo.com",
