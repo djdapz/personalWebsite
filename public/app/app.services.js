@@ -17,7 +17,7 @@ var appServices = angular.module('app.services', ['ngResource']);
 //    })
 //}]);
 
-appServices.factory('EmailService', ['$resource',	function($resource){
+appServices.factory('EmailService', ['$resource', function($resource){
     return $resource('/contact', {},	{
         get: {
             method: "POST",
