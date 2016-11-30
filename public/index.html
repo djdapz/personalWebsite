@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
@@ -48,7 +49,8 @@
                         <li><a class="navbar-link" href="#portfolio">PORTFOLIO</a></li>
                         <li><a class="navbar-link" href="#contact">CONTACT</a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
 
         </nav>
@@ -87,18 +89,18 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="./assets/images/devon.jpg"/>
+                    <img src="./assets/images/devon.jpg" />
                 </div>
                 <div class="col-md-6">
                     <!--todo - Fill in the about me section -->
                     <!--<p>-->
-                        <!--Deep v mustache art party, vinyl sriracha est blue bottle. Pour-over kombucha chillwave, helvetica freegan drinking vinegar schlitz street art excepteur fixie et. Leggings brunch humblebrag roof party quinoa et. Marfa polaroid squid beard, shoreditch sunt blog cupidatat venmo affogato assumenda freegan letterpress before they sold out duis. Occupy lomo qui enim gochujang, vero umami butcher before they sold out labore. Actually tempor kitsch, normcore sed magna skateboard culpa consectetur man bun. VHS health goth distillery, waistcoat PBR&B green juice ennui ex sunt cupidatat tofu.-->
+                    <!--Deep v mustache art party, vinyl sriracha est blue bottle. Pour-over kombucha chillwave, helvetica freegan drinking vinegar schlitz street art excepteur fixie et. Leggings brunch humblebrag roof party quinoa et. Marfa polaroid squid beard, shoreditch sunt blog cupidatat venmo affogato assumenda freegan letterpress before they sold out duis. Occupy lomo qui enim gochujang, vero umami butcher before they sold out labore. Actually tempor kitsch, normcore sed magna skateboard culpa consectetur man bun. VHS health goth distillery, waistcoat PBR&B green juice ennui ex sunt cupidatat tofu.-->
                     <!--</p>-->
                     <!--<p>-->
-                        <!--Polaroid elit sed mollit, duis truffaut mixtape. Readymade chia street art keffiyeh, anim aute irony fanny pack selfies delectus DIY man braid pour-over godard letterpress. Fixie franzen pop-up enim raw denim plaid. Proident twee etsy neutra blue bottle trust fund franzen, 3 wolf moon aliqua mollit kogi. Selvage cliche plaid nisi brunch. Nesciunt etsy pickled taxidermy humblebrag poutine nihil. Voluptate nulla sed ad nihil, aute sartorial chia sustainable 90's.-->
+                    <!--Polaroid elit sed mollit, duis truffaut mixtape. Readymade chia street art keffiyeh, anim aute irony fanny pack selfies delectus DIY man braid pour-over godard letterpress. Fixie franzen pop-up enim raw denim plaid. Proident twee etsy neutra blue bottle trust fund franzen, 3 wolf moon aliqua mollit kogi. Selvage cliche plaid nisi brunch. Nesciunt etsy pickled taxidermy humblebrag poutine nihil. Voluptate nulla sed ad nihil, aute sartorial chia sustainable 90's.-->
                     <!--</p>-->
                     <!--<p>-->
-                        <!--Pinterest retro listicle twee, hashtag echo park ramps artisan migas seitan bespoke try-hard. Taxidermy art party mixtape, umami fanny pack hoodie banh mi leggings wolf small batch. Butcher bicycle rights intelligentsia vinyl mlkshk gochujang mumblecore pop-up, heirloom pabst whatever VHS letterpress flexitarian. Selvage poutine photo booth pinterest 3 wolf moon retro vegan. Banh mi tilde letterpress, celiac bespoke biodiesel typewriter meggings fap food truck wolf knausgaard gastropub aesthetic polaroid. You probably haven't heard of them hoodie literally stumptown truffaut thundercats ugh, tofu whatever hashtag blue bottle squid ethical selfies. Mustache banh mi pickled, beard kogi ramps stumptown gluten-free bushwick intelligentsia DIY tattooed deep v.-->
+                    <!--Pinterest retro listicle twee, hashtag echo park ramps artisan migas seitan bespoke try-hard. Taxidermy art party mixtape, umami fanny pack hoodie banh mi leggings wolf small batch. Butcher bicycle rights intelligentsia vinyl mlkshk gochujang mumblecore pop-up, heirloom pabst whatever VHS letterpress flexitarian. Selvage poutine photo booth pinterest 3 wolf moon retro vegan. Banh mi tilde letterpress, celiac bespoke biodiesel typewriter meggings fap food truck wolf knausgaard gastropub aesthetic polaroid. You probably haven't heard of them hoodie literally stumptown truffaut thundercats ugh, tofu whatever hashtag blue bottle squid ethical selfies. Mustache banh mi pickled, beard kogi ramps stumptown gluten-free bushwick intelligentsia DIY tattooed deep v.-->
                     <!--</p>-->
                     <p>
                         This section coming soon!
@@ -115,11 +117,11 @@
 
 
     <div class="section" id="my-portfolio">
-        <div class="scroll-to-patch"id="portfolio">
+        <div class="scroll-to-patch" id="portfolio">
         </div>
         <div class="container">
             <div class="title-bar">
-                    <h1>
+                <h1>
                         Portfolio
                     </h1>
 
@@ -147,7 +149,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-6 col-md-4" >
+                <div class="col-sm-6 col-md-4">
                     <a target="_blank" href="./eliminationDiet" class="tile-link">
                         <div class="tile" id="diet_img">
                             <div class="blurb">
@@ -238,13 +240,12 @@
                         </div>
                         <div class="col-md-7">
                             <p>
-                                  {{job.start}} to {{job.end}}   |   {{job.location}}
+                                {{job.start}} to {{job.end}} | {{job.location}}
                             </p>
                             <p>
                                 <span class="resume-label">
                                     Position:
-                                </span>
-                                {{job.title}}
+                                </span> {{job.title}}
                             </p>
                             <span ng-if="job.description">
                                 <hr>
@@ -279,21 +280,19 @@
                         </div>
                         <div class="col-md-7">
                             <p>
-                                {{school.start}} to {{school.end}}  |  {{school.location}}
+                                {{school.start}} to {{school.end}} | {{school.location}}
                             </p>
 
 
                             <p ng-if="school.major">
                                 <span class="resume-label">
                                     MAJOR:
-                                </span>
-                                {{school.major}}
+                                </span> {{school.major}}
                             </p>
                             <p ng-if="school.certificate">
                                 <span class="resume-label">
                                     CERTIFICATE:
-                                </span>
-                                {{school.certificate}}
+                                </span> {{school.certificate}}
                             </p>
                             <div ng-if="school !== schools[schools.length-1]">
                                 <br/>
@@ -401,24 +400,24 @@
                         </div>
                         <div class="col-md-7 col-xs-4 col-xs-offset-4 col-md-offset-0">
                             <div class="star-section">
-                                <span  ng-repeat="star in language.stars" >
+                                <span ng-repeat="star in language.stars">
                                     <span class="glyphicon glyphicon-star" ng-if="star >0">
                                     </span>
-                                    <span class="glyphicon glyphicon-star-empty" ng-if="star <0">
+                                <span class="glyphicon glyphicon-star-empty" ng-if="star <0">
                                     </span>
                                 </span>
                             </div>
                         </div>
                     </div>
-                        <!--TODO Make the frameworks collapsable or get rid of frameworks-->
+                    <!--TODO Make the frameworks collapsable or get rid of frameworks-->
                     <div ng-if="language.frameworks">
                         <div class="row framework-detail-row">
                             <!--<div class="row framework-detail-sub-row">-->
-                                <!--<div class="col-md-3 col-md-offset-1">-->
-                                    <!--<h4>-->
-                                        <!--Frameworks:-->
-                                    <!--</h4>-->
-                                <!--</div>-->
+                            <!--<div class="col-md-3 col-md-offset-1">-->
+                            <!--<h4>-->
+                            <!--Frameworks:-->
+                            <!--</h4>-->
+                            <!--</div>-->
                             <!--</div>-->
                             <div class="row framework-detail-sub-row">
                                 <div ng-repeat="fw in language.frameworks" class="row">
@@ -430,10 +429,10 @@
 
                                     <div class="col-md-7 col-xs-4 col-xs-offset-4 col-md-offset-0">
                                         <div class="star-section">
-                                        <span  ng-repeat="star in fw.stars" >
+                                            <span ng-repeat="star in fw.stars">
                                             <span class="glyphicon glyphicon-star" ng-if="star >0"></span>
                                             <span class="glyphicon glyphicon-star-empty" ng-if="star <0"></span>
-                                        </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -518,8 +517,7 @@
                             <p>
                                 <span class="resume-label">
                                     Technology:
-                                </span>
-                                {{class.technology}}
+                                </span> {{class.technology}}
                             </p>
                         </div>
                     </div>
@@ -527,7 +525,7 @@
             </div>
 
 
-            <div class="detail-section top-detail-section" >
+            <div class="detail-section top-detail-section">
                 <div class="row">
                     <div class="col-md-4">
                         <h2>
@@ -642,53 +640,38 @@
                         <hr/>
                     </div>
                 </div>
-
                 <div class="row detail-row icon-link-row">
 
-
-                    <div class="col-sm-3 col-md-1 col-md-offset-5" >
+                    <div class="col-sm-3 col-md-1 col-md-offset-5">
                         <a target="_blank" href="https://www.linkedin.com/in/devon-d-apuzzo-91a08653" class="icon-link">
-                            <img src="assets/icons/linkedin.png"/>
+                            <img src="assets/icons/linkedin.png" />
                         </a>
                     </div>
 
-                    <div class="col-sm-3 col-md-1" >
+                    <div class="col-sm-3 col-md-1">
                         <a target="_blank" href="https://github.com/djdapz" class="icon-link">
-                            <img src="assets/icons/github.png"/>
+                            <img src="assets/icons/github.png" />
                         </a>
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
     </div>
-
-
-
 </body>
-
-
-
-
 
 <!--Dependencies-->
 
-<script type = "text/javascript" src="./bower_components/angular/angular.js"></script>
-<script type = "text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
-<script type = "text/javascript" src="./bower_components/ng-resource/ng-resource.js"></script>
-<script type = "text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
-<script type = "text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="./bower_components/ng-resource/ng-resource.js"></script>
+<script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 
 <!--My Javascript-->
-
-
-<script type = "text/javascript" src="./app/app.module.js"></script>
-<script type = "text/javascript" src="./app/app.services.js"></script>
-<script type = "text/javascript" src="./app/app.controller.js"></script>
-<script type = "text/javascript" src="./js/jqueryComponents.js"></script>
+<script type="text/javascript" src="./app/app.module.js"></script>
+<script type="text/javascript" src="./app/app.services.js"></script>
+<script type="text/javascript" src="./app/app.controller.js"></script>
+<script type="text/javascript" src="./js/jqueryComponents.js"></script>
 
 </html>

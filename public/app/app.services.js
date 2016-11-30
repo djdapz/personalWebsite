@@ -4,21 +4,41 @@
 
 var appServices = angular.module('app.services', ['ngResource']);
 
-appServices.factory('EmailService', ['$resource', function($resource){
-    var sendMail = function(params, success, failure){
-        var params = {
+appServices.factory('ConfigService', [function(){
 
-        }
+    var url = "https://devon-dot-dapuzzo-dot-com.herokuapp.com"
+    return {
+        url: url
     }
+}])
 
-    return $resource('/contact', {},	{
-        submit: {
+appServices.factory('EmailService', ['$http', "ConfigService", function($http, ConfigService){
+
+    var sendMail = function(params){
+        var req = {
             method: "POST",
-            params: {
-                name: undefined,
-                email: undefined,
-                message: undefined
+            url: ConfigService.url + "/contact",
+            parameters: {
+                email: params.email,
+                name: params.name,
+                message: params.message
             }
         }
-    });
+
+        $http(req).then(
+            function(value){
+                console.log(value)
+            },
+            function(error){
+                console.log(error)
+            }
+        )
+    }
+
+
+
+
+    return {
+        sendMail: sendMail
+    }
 }]);
