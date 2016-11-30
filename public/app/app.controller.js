@@ -30,6 +30,16 @@ var appController = function($scope, $http, EmailService){
 
         })
 
+    $scope.contact = {
+        email: undefined,
+        name: undefined,
+        message: undefined
+    }
+    $scope.state = {
+        email_status:"RESTING",
+        error: false
+    }
+
     var init = function(){
         for(var i = 0; i<$scope.languages.length; i++){
             setUpStars($scope.languages[i]);
@@ -61,15 +71,31 @@ var appController = function($scope, $http, EmailService){
         1+1;
     };
 
-    $scope.sendEmail = function(name, email, message){
+    $scope.sendEmail = function(){
         //todo figure out ngResrouce, won't work till then
         var data ={
-            name: name,
-            email: email,
-            message: message
+            name: $scope.contact.name,
+            email: $scope.contact.email,
+            message: $scope.contact.message
         };
+        $scope.state.email_status="SENDING";
+        $scope.state.error = undefined;
+        EmailService.sendMail(data,
+            function(){
+                $scope.state.email_status="SENT";
+                $scope.contact.name = undefined;
+                $scope.contact.email = undefined;
+                $scope.contact.message = undefined;
+            },
+            function(error){
+                $scope.state.email_status="RESTING";
+                $scope.state.error = error;
+            }
+        )
+    }
 
-        EmailService.sendMail(data)
+    $scope.sendAnotherEmail = function(){
+        $scope.state.email_status="RESTING";
     }
 
 

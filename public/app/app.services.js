@@ -14,23 +14,25 @@ appServices.factory('ConfigService', [function(){
 
 appServices.factory('EmailService', ['$http', "ConfigService", function($http, ConfigService){
 
-    var sendMail = function(params){
+    var sendMail = function(parameters, success, failure){
         var req = {
             method: "POST",
             url: ConfigService.url + "/contact",
-            parameters: {
-                email: params.email,
-                name: params.name,
-                message: params.message
+            params: {
+                email: parameters.email,
+                name: parameters.name,
+                message: parameters.message
             }
         }
 
         $http(req).then(
             function(value){
                 console.log(value)
+                success();
             },
             function(error){
                 console.log(error)
+                failure(error);
             }
         )
     }

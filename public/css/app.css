@@ -236,6 +236,7 @@ span[class*="glyphicon-one-dot"] {
     padding-top: 6px;
     padding-bottom: 6px;
     color: white;
+    background: none;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
     -khtml-user-select: none;    /* Konqueror */
@@ -263,6 +264,50 @@ span[class*="glyphicon-one-dot"] {
     text-decoration: none;
 }
 
+.fill-col{
+    width: 100%
+}
+
+.gly-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 
 
 
@@ -349,12 +394,30 @@ span[class*="glyphicon-one-dot"] {
 }
 
 
+.confirmation-box h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.confirmation-box button{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.confirmation-box span{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.spinner{
+    text-align: center;
+}
 
 @media(max-width: 992px){
     .detail-section h3{
         text-align: center;
         margin-top: 0px;
     }
+
 
     .detail-section h2{
         text-align: center;

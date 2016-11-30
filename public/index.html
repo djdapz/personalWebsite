@@ -596,9 +596,6 @@
                 <h1>
                     Contact Me
                 </h1>
-
-                <button class="btn btn-primary" ng-click="sendEmail('devon', 'djdapz@aol.com', 'hey dude!')">send email</button>
-
             </div>
 
             <div class="row">
@@ -610,29 +607,80 @@
 
             <div class="detail-section">
                 <div class="row detail-row">
-                    <div class="col-md-3 col-md-offset-1">
-                        <h3>
-                            Phone:
-                        </h3>
-                    </div>
-                    <div class="col-md-7">
-                        <p>
-                            (303) 589-3360
-                        </p>
-                    </div>
-                </div>
 
-                <div class="row detail-row">
-                    <div class="col-md-3 col-md-offset-1">
-                        <h3>
-                            Email:
-                        </h3>
+                    <div ng-if='state.email_status == "SENDING"' class='confirmation-box'>
+                        <div class='row'>
+                            <div class= 'col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3'>
+                                <h3>
+                                    Sending
+                                </h3>
+                            </div>
+                            <div class='col-md-2 col-md-offset-5 col-xs-offset-4 col-xs-4 spinner'>
+                                <span class="glyphicon glyphicon-refresh gly-spin"></span>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-md-7">
-                        <p>
-                            devon.dapuzzo@gmail.com
-                        </p>
+                    <div ng-if='state.email_status == "SENT"' class='confirmation-box'>
+                        <div class='row'>
+                            <div class= 'col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3'>
+                                <h3 class='center-me'>
+                                    Success! Email Sent
+                                </h3>
+                            </div>
+                            <div class='col-md-2 col-md-offset-5 col-xs-offset-4 col-xs-4 '>
+                                <button ng-click="sendAnotherEmail()" class="my-button fill-col">Send Another</button>
+                            </div>
+                        </div>
+
                     </div>
+                    <div ng-if='state.error'>
+                        ERROR
+
+                    </div>
+                    <form ng-submit="sendEmail()" ng-if='state.email_status == "RESTING"'>
+                        <div class="row">
+                            <div class="form-group col-md-offset-3 col-md-3 col-xs-offset-2 col-xs-8">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="contact_email"
+                                    placeholder="Email"
+                                    ng-model="contact.email"
+                                    ng-required="true"
+                                    ng-disabled="state.email_status == 'SENDING'">
+                            </div>
+
+                            <div class="form-group col-md-3 col-md-offset-0 col-xs-offset-2 col-xs-8 ">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="contact_name"
+                                    placeholder="Name"
+                                    ng-model="contact.name"
+                                    ng-required="true"
+                                    ng-disabled="state.email_status == 'SENDING'">
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class="form-group col-md-6 col-md-offset-3 col-xs-offset-2 col-xs-8">
+                                <textarea
+                                    type="text"
+                                    class="form-control"
+                                    id="contact_message"
+                                    placeholder="Message"
+                                    ng-model="contact.message"
+                                    ng-required="true"
+                                    ng-disabled="state.email_status == 'SENDING'">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-md-2 col-md-offset-7 col-xs-3 col-xs-offset-7'>
+                                <button type="submit" class="my-button fill-col">Send Email</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="row">
@@ -640,9 +688,10 @@
                         <hr/>
                     </div>
                 </div>
+
                 <div class="row detail-row icon-link-row">
 
-                    <div class="col-sm-3 col-md-1 col-md-offset-5">
+                    <div class="col-sm-3 col-sm-offset-4 col-md-1 col-md-offset-5">
                         <a target="_blank" href="https://www.linkedin.com/in/devon-d-apuzzo-91a08653" class="icon-link">
                             <img src="assets/icons/linkedin.png" />
                         </a>
