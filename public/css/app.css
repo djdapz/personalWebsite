@@ -39,7 +39,6 @@ p, div {
 .shrink{
     background:rgba(255,255,255,0.5);
     height: 40px !important;
-
 }
 
 .shrink a {
@@ -385,4 +384,3 @@ span[class*="glyphicon-one-dot"] {
 
 
 }
-

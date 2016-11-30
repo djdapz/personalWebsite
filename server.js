@@ -12,6 +12,14 @@ app.use(express.static(__dirname + "/public"));
 var mailRoutes = require('./app/routes/mail.js');
 
 
+app.all('/*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+    res.header("Access-Control-Allow-Methods", "GET, POST", "PUT");
+    next();
+});
+
+
 //routeconfig
 app.route('/contact')
 	.post(mailRoutes.sendMail);
