@@ -12,13 +12,17 @@
     "cs": [
         {
             "number": 101,
-            "title": "An Introduction to Computer Science for Everyone",
-            "technology": ""
+            "title": "An Introduction to Computer Science for Everyone"
         },
         {
             "number": 111,
             "title": "Fundamentals to Computer Programming 1",
             "technology": "Meta"
+        },
+        {
+            "number": 205,
+            "title": "Fundamentals of Computer System Software",
+            "technology": "Assembly Code"
         },
         {
             "number": 211,
@@ -61,8 +65,7 @@
         },
         {
             "number": "336",
-            "title": "Design and Analysis of Algorithms",
-            "technology": ""
+            "title": "Design and Analysis of Algorithms"
         },
         {
             "number": 352,
@@ -88,6 +91,10 @@
             "number": 395,
             "title": "Swarm Robotics",
             "technology": "C++"
+        },
+        {
+            "number": 395,
+            "title": "Wireless and Mobile Health"
         }
 
     ],
@@ -224,26 +231,20 @@
             "name": "Form & Function Marketing",
             "start": "Fall 2014",
             "end": "present",
-            "description": "Account Executive and Member of student-run marketing consulting group. Formulated and executed marketing plans for local businesses, student groups and charities.",
-            "list_title": "Clients",
+            "link": "http://www.formandfunctionmarketing.com",
+            "description": "Northwestern student marketing agency that provides free consulting to local businesses, non-profits, and student organizations",
+            "list_title": "Positions",
             "list": [
                 {
-                    "title": "Salmon Cove"
+                    "title": "VP - Technology - 2017",
+                    "description": "Created this position as the technological side of the organization. Responsibilities include: SEO, technical consulting to teams, small development projects and IT Administration "
                 },
                 {
-                    "title": "Honor Flight Chicago"
+                    "title": "Account Executive - 2016",
+                    "description": "Lead 7 person team for projects with various clients"
                 },
                 {
-                    "title": "LYFE Kitchen"
-                },
-                {
-                    "title": "Kohl's Children Museum"
-                },
-                {
-                    "title": "Dave's Italian Kitchen"
-                },
-                {
-                    "title": "Students Consulting For Non-Profit Organizations (SCNO)"
+                    "title": "General Member - 2014-2016"
                 }
             ]
         },
@@ -286,8 +287,12 @@
             "title": "Applied Econometrics 2"
         },
         {
-            "number": "FE 300",
+            "number": "FE 310",
             "title": "Principles of Finance"
+        },
+        {
+            "number": "FE 312",
+            "title": "Investments"
         }
     ],
     "jobs":

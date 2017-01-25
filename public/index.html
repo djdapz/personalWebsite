@@ -44,9 +44,9 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="navbar-link" href="#about">ABOUT ME</a></li>
+                        <li><a class="navbar-link" href="#portfolio">PORTFOLIO</a></li>
                         <li><a class="navbar-link" href="#resume">RESUME</a></li>
                         <li><a class="navbar-link" href="#courses">COURSES</a></li>
-                        <li><a class="navbar-link" href="#portfolio">PORTFOLIO</a></li>
                         <li><a class="navbar-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
@@ -63,9 +63,9 @@
             <h1>
                 Devon John D'Apuzzo
             </h1>
-            <h3>
+            <!-- <h3>
                 ~insert clever tagline here~
-            </h3>
+            </h3> -->
         </div>
 
     </div>
@@ -321,7 +321,12 @@
                 <div ng-repeat="club in clubs">
                     <div class="row detail-row">
                         <div class="col-md-3 col-md-offset-1">
-                            <h3>
+                            <h3 ng-if="club.link">
+                                <a href="{{club.link}}" target="_blank">
+                                    {{club.name}}
+                                </a>
+                            </h3>
+                            <h3 ng-if="!club.link">
                                 {{club.name}}
                             </h3>
                         </div>
@@ -335,7 +340,9 @@
                             </p>
                             <p ng-if="club.list">
                                 <span class="resume-label">
-                                    {{club.list_title}}
+                                    <u>
+                                        {{club.list_title}}
+                                    </u>
                                 </span>
                                 <ul>
                                     <li ng-repeat="detail in club.list">
@@ -514,7 +521,7 @@
                             <p>
                                 {{class.title}}
                             </p>
-                            <p>
+                            <p ng-if='class.technology'>
                                 <span class="resume-label">
                                     Technology:
                                 </span> {{class.technology}}
