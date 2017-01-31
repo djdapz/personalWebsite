@@ -212,22 +212,6 @@
             ]
         },
         {
-            "name": "Peer Leader",
-            "start": "Fall 2011",
-            "end": "Spring 2013",
-            "description": "Advised and mentored a group of incoming Alexander Dawson School freshmen throughout the year.",
-            "list_title": null,
-            "list": null
-        },
-        {
-            "name": "Conduct Comittee",
-            "start": "Fall 2010",
-            "end": "Spring 2012",
-            "description": "Elected by peers to serve on the Alexander Dawson School disciplinary committee run by students and faculty.",
-            "list_title": null,
-            "list": null
-        },
-        {
             "name": "Form & Function Marketing",
             "start": "Fall 2014",
             "end": "present",
@@ -247,6 +231,22 @@
                     "title": "General Member - 2014-2016"
                 }
             ]
+        },
+        {
+            "name": "Peer Leader",
+            "start": "Fall 2011",
+            "end": "Spring 2013",
+            "description": "Advised and mentored a group of incoming Alexander Dawson School freshmen throughout the year.",
+            "list_title": null,
+            "list": null
+        },
+        {
+            "name": "Conduct Committee",
+            "start": "Fall 2010",
+            "end": "Spring 2012",
+            "description": "Elected by peers to serve on the Alexander Dawson School disciplinary committee run by students and faculty.",
+            "list_title": null,
+            "list": null
         },
         {
             "name": "Northwestern Sketch Television",
@@ -297,6 +297,13 @@
     ],
     "jobs":
         [
+            {
+                "name": "Pivotal Labs",
+                "start": "September 2017",
+                "location": "Chicago, IL",
+                "title": "Software Engineer",
+                "description": "Incoming Software Engineer at Pivotal Labs, starting in September 2017."
+            },
             {
                 "name": "Expedia Inc.",
                 "start": "June 2016",
