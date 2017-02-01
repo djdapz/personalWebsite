@@ -217,6 +217,19 @@ span[class*="glyphicon-one-dot"] {
     background-size: 100% 100%;
 }
 
+#dine_img:hover{
+    background-image: url("../assets/gifs/dine.gif ");
+    background-size: 100% 100%;
+}
+#clips_img:hover{
+    background-image: url("../assets/gifs/scrooge.gif ");
+    background-size: 100% 100%;
+}
+.backend_img:hover{
+    background-image: url("../assets/gifs/matrix.gif ");
+    background-size: 100% 100%;
+}
+
 .title-bar{
     text-align: center;
 }

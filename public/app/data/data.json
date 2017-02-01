@@ -147,13 +147,18 @@
                     "proficiency":5
                 },
                 {
+                    "name": "Supersonic/Appgyver",
+                    "proficiency":4
+                },
+                {
                     "name": "Node",
                     "proficiency":3
                 },
                 {
                     "name": "Express",
                     "proficiency":3
-                },{
+                },
+                {
                     "name": "Backbone",
                     "proficiency":2
                 },
