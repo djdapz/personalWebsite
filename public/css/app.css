@@ -33,7 +33,18 @@ p, div {
 .navbar a {
     color: #870202;
     -webkit-transition: all .7s ease;
-    transition: all .7s ease;}
+    transition: all .7s ease;
+}
+
+.hamburger-line{
+    background-color: #870202;
+}
+
+.shrink .navbar-toggle{
+    margin-top: 3px !important;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+}
 
 
 .shrink{
