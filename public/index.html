@@ -6,8 +6,8 @@
     <meta charset="utf-8">
 
     <title>Devon D'Apuzzo</title>
-    <meta name="description" content="Devon D'Apuzzo's Personal Webpage">
-    <meta name="author" content="DevonDapuzzo">
+    <meta name="description" content="Devon D'Apuzzo's Personal Website">
+    <meta name="author" content="Devon_John_Dapuzzo">
 
     <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/app.css">
@@ -353,10 +353,15 @@
                                     MAJOR:
                                 </span> {{school.major}}
                             </p>
-                            <p ng-if="school.certificate">
+                            <p ng-if="school.minor">
                                 <span class="resume-label">
-                                    CERTIFICATE:
-                                </span> {{school.certificate}}
+                                    MINOR:
+                                </span> {{school.minor}}
+                            </p>
+                            <p ng-if="school.other">
+                                <span class="resume-label">
+                                    OTHER:
+                                </span> {{school.other}}
                             </p>
                             <div ng-if="school !== schools[schools.length-1]">
                                 <br/>

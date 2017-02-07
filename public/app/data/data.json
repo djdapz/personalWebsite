@@ -358,8 +358,9 @@
             "special": null,
             "gpa": 3.626,
             "location": "Evanston, IL",
-            "major": "Computer Science AND Economics",
-            "certificate": "Kellogg Financial Economics Certificate"
+            "major": "Computer Science",
+            "minor": "Economics",
+            "other": "Financial Economics Certificate - Kellogg School of Management"
         },
         {
             "name": "The University of Edinburgh",
