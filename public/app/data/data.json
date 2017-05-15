@@ -112,6 +112,12 @@
             "name": "Object Oriented Programming"
         },
         {
+            "name": "Test Driven Development"
+        },
+        {
+            "name": "JUnit"
+        },
+        {
             "name": "User Centered Design"
         },
         {
@@ -124,7 +130,7 @@
             "name": "Audio Processing"
         },
         {
-            "name": "Graphic Design (Photoshop and Illustrator)"
+            "name": "Graphic Design (Adobe Photoshop and Illustrator)"
         }
     ],
     "languages": [
@@ -185,7 +191,7 @@
         },
         {
             "name": "Java",
-            "proficiency": 3,
+            "proficiency": 4,
             "frameworks": [
                 {
                     "name": "Spring",
