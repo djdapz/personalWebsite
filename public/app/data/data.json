@@ -483,9 +483,15 @@
   ],
   "projects": [
     {
+      "title": "Luke Dapuzzo",
+      "link": "http://www.lukedapuzzo.com",
+      "blurb": "Band website for my brother. React + Spring",
+      "id": "concert_img"
+    },
+    {
       "title": "Parcheesi",
       "link": "https://github.com/djdapz/parcheesi",
-      "blurb": "Java Implementation of Parcheesi - Example of OO Skills and Tests",
+      "blurb": "Java Implementation of Parcheesi - Example of OO Skills and Tests (before I learned TDD)",
       "id": "backend_img"
     },
     {
