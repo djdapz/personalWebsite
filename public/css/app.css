@@ -187,7 +187,6 @@ span[class*="glyphicon-one-dot"] {
     background: rgb(226, 226, 226);
     height: 300px;
     width: 300px;
-    margin: 20px auto 20px auto;
     color: black;
     padding: 40px;
 
@@ -208,31 +207,31 @@ span[class*="glyphicon-one-dot"] {
     padding-top: 0px;
 }
 
-#dj_img:hover{
+.dj_img:hover{
     background-image: url("../assets/gifs/dj_cat.gif ");
     background-size: auto 100%;
 }
 
-#diet_img:hover{
+.diet_img:hover{
     background-image: url("../assets/gifs/diet2.gif ");
     background-size: auto 100%;
 }
 
-#other_img:hover{
+.other_img:hover{
     background-image: url("../assets/gifs/engineering.gif ");
     background-size: 100% 100%;
 }
 
-#concert_img:hover{
+.concert_img:hover{
     background-image: url("../assets/gifs/concert.gif ");
     background-size: 100% 100%;
 }
 
-#dine_img:hover{
+.dine_img:hover{
     background-image: url("../assets/gifs/dine.gif ");
     background-size: 100% 100%;
 }
-#clips_img:hover{
+.clips_img:hover{
     background-image: url("../assets/gifs/scrooge.gif ");
     background-size: 100% 100%;
 }
@@ -442,7 +441,6 @@ span[class*="glyphicon-one-dot"] {
         margin-top: 0px;
     }
 
-
     .detail-section h2{
         text-align: center;
     }
@@ -466,8 +464,14 @@ span[class*="glyphicon-one-dot"] {
         width: 85px;
         margin-left: auto;
     }
+}
 
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-
-
+.project{
+    margin: 20px;
 }

@@ -4,17 +4,17 @@
 
 var appServices = angular.module('app.services', ['ngResource']);
 
-appServices.factory('ConfigService', [function(){
+appServices.factory('ConfigService', [function () {
 
-    var url = "https://devon-dot-dapuzzo-dot-com.herokuapp.com"
+    var url = "https://devon-dot-dapuzzo-dot-com.herokuapp.com";
     return {
         url: url
     }
-}])
+}]);
 
-appServices.factory('EmailService', ['$http', "ConfigService", function($http, ConfigService){
+appServices.factory('EmailService', ['$http', "ConfigService", function ($http, ConfigService) {
 
-    var sendMail = function(parameters, success, failure){
+    var sendMail = function (parameters, success, failure) {
         var req = {
             method: "POST",
             url: ConfigService.url + "/contact",
@@ -23,21 +23,19 @@ appServices.factory('EmailService', ['$http', "ConfigService", function($http, C
                 name: parameters.name,
                 message: parameters.message
             }
-        }
+        };
 
         $http(req).then(
-            function(value){
-                console.log(value)
+            function (value) {
+                console.log(value);
                 success();
             },
-            function(error){
-                console.log(error)
+            function (error) {
+                console.log(error);
                 failure(error);
             }
         )
-    }
-
-
+    };
 
 
     return {

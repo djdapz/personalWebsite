@@ -1,8 +1,8 @@
 /**
  * Created by djdapz on 3/31/16.
  */
-(function(angular) {
+(function (angular) {
     angular.module("app", ['ngResource',
-                            "app.services"]);
+        "app.services"]);
 
 }(angular));
