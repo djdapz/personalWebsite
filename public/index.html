@@ -262,92 +262,6 @@
         </div>
 
 
-        <!--TODO take out some delt stuff-->
-        <!--TODO make & vs AND consistent in headings-->
-
-
-        <div class="detail-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>
-                        LEADERSHIP AND INVOLVEMENT
-                    </h2>
-
-                </div>
-
-            </div>
-            <hr/>
-            <div ng-repeat="club in clubs">
-                <div class="row detail-row">
-                    <div class="col-md-3 col-md-offset-1">
-                        <h3 ng-if="club.link">
-                            <a href="{{club.link}}" target="_blank">
-                                {{club.name}}
-                            </a>
-                        </h3>
-                        <h3 ng-if="!club.link">
-                            {{club.name}}
-                        </h3>
-                    </div>
-                    <div class="col-md-7">
-                        <p>
-                            {{club.start}} to {{club.end}}
-                        </p>
-
-                        <p ng-if="club.description">
-                            {{club.description}}
-                        </p>
-                        <p ng-if="club.list">
-                                <span class="resume-label">
-                                    <u>
-                                        {{club.list_title}}
-                                    </u>
-                                </span>
-                        <ul>
-                            <li ng-repeat="detail in club.list">
-                                        <span class="resume-label">
-                                            {{detail.title}}
-                                        </span>
-                                <span ng-if="detail.description">
-                                            : {{detail.description}}
-                                        </span>
-                            </li>
-                        </ul>
-                        </p>
-                        <div ng-if="school !== schools[schools.length-1]">
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="detail-section">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>
-                        RECOGNITIONS
-                    </h2>
-                </div>
-            </div>
-            <hr/>
-            <div ng-repeat="award in awards">
-                <div class="row detail-row">
-                    <div class="col-md-3 col-md-offset-1">
-                        <h3>
-                            {{award.name}}
-                        </h3>
-                    </div>
-                    <div class="col-md-7">
-                        <p>
-                            {{award.description}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="detail-section" id="programming-languages-section">
             <div class="row">
                 <div class="col-md-4">
@@ -460,6 +374,94 @@
                 </div>
             </div>
         </div>
+
+
+        <!--TODO take out some delt stuff-->
+        <!--TODO make & vs AND consistent in headings-->
+
+
+        <div class="detail-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>
+                        LEADERSHIP AND INVOLVEMENT
+                    </h2>
+
+                </div>
+
+            </div>
+            <hr/>
+            <div ng-repeat="club in clubs">
+                <div class="row detail-row">
+                    <div class="col-md-3 col-md-offset-1">
+                        <h3 ng-if="club.link">
+                            <a href="{{club.link}}" target="_blank">
+                                {{club.name}}
+                            </a>
+                        </h3>
+                        <h3 ng-if="!club.link">
+                            {{club.name}}
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p>
+                            {{club.start}} to {{club.end}}
+                        </p>
+
+                        <p ng-if="club.description">
+                            {{club.description}}
+                        </p>
+                        <p ng-if="club.list">
+                                <span class="resume-label">
+                                    <u>
+                                        {{club.list_title}}
+                                    </u>
+                                </span>
+                        <ul>
+                            <li ng-repeat="detail in club.list">
+                                        <span class="resume-label">
+                                            {{detail.title}}
+                                        </span>
+                                <span ng-if="detail.description">
+                                            : {{detail.description}}
+                                        </span>
+                            </li>
+                        </ul>
+                        </p>
+                        <div ng-if="school !== schools[schools.length-1]">
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="detail-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>
+                        RECOGNITIONS
+                    </h2>
+                </div>
+            </div>
+            <hr/>
+            <div ng-repeat="award in awards">
+                <div class="row detail-row">
+                    <div class="col-md-3 col-md-offset-1">
+                        <h3>
+                            {{award.name}}
+                        </h3>
+                    </div>
+                    <div class="col-md-7">
+                        <p>
+                            {{award.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
     </div>
