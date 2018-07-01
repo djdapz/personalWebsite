@@ -99,7 +99,10 @@
   ],
   "skills": [
     {
-      "name": "Cloud Foundry"
+      "name": "Git"
+    },
+    {
+      "name": "Pivotal Cloud Foundry"
     },
     {
       "name": "Heroku"
@@ -111,25 +114,37 @@
       "name": "Bamboo"
     },
     {
+      "name": "Concourse"
+    },
+    {
       "name": "Gradle"
-    },
-    {
-      "name": "PosgreSQL"
-    },
-    {
-      "name": "Git"
     },
     {
       "name": "Perforce"
     },
     {
-      "name": "Object Oriented Programming"
+      "name": "SQL (MariaDB & PostgreSQL)"
+    },
+    {
+      "name": "Rabbit MQ"
+    },
+    {
+      "name": "Event Based Architecture"
+    },
+    {
+      "name": "Microservices"
     },
     {
       "name": "SOLID Design Principles"
     },
     {
+      "name": "Object Oriented Programming & Design"
+    },
+    {
       "name": "Test Driven Development"
+    },
+    {
+      "name": "Consumer Driven Contracts"
     },
     {
       "name": "Paired Programming"
@@ -155,12 +170,12 @@
   ],
   "languages": [
     {
-      "name": "Java",
-      "proficiency": 5,
+      "name": "Java 8",
+      "proficiency": 3,
       "frameworks": [
         {
           "name": "Spring",
-          "proficiency": 4
+          "proficiency": 3
         }
       ]
     },
@@ -169,67 +184,51 @@
       "proficiency": 3
     },
     {
-      "name": "C++",
-      "proficiency": 3,
-      "frameworks": [
-        {
-          "name": "openGL",
-          "proficiency": 2
-        }
-      ]
+      "name": "HTML",
+      "proficiency": 3
+    },
+    {
+      "name": "CSS",
+      "proficiency": 3
     },
     {
       "name": "Javascript",
-      "proficiency": 5,
+      "proficiency": 3,
       "frameworks": [
         {
           "name": "Redux",
-          "proficiency": 5
-        },
-        {
-          "name": "Angular.JS",
           "proficiency": 3
         },
         {
           "name": "React",
-          "proficiency": 5
-        },
-        {
-          "name": "Supersonic/Appgyver",
           "proficiency": 3
         },
         {
           "name": "Node",
-          "proficiency": 3
-        },
-        {
-          "name": "Express",
-          "proficiency": 3
-        },
-        {
-          "name": "Backbone",
           "proficiency": 2
         },
         {
-          "name": "Ember",
+          "name": "Express",
+          "proficiency": 2
+        },
+        {
+          "name": "Angular.JS",
           "proficiency": 2
         }
       ]
     },
     {
       "name": "Python",
-      "proficiency": 4,
+      "proficiency": 2,
       "frameworks": null
     },
     {
-      "name": "HTML5/CSS3",
-      "proficiency": 5,
-      "frameworks": [
-        {
-          "name": "LESS",
-          "proficiency": 2
-        }
-      ]
+      "name": "C++",
+      "proficiency": 1
+    },
+    {
+      "name": "Haskell",
+      "proficiency": 1
     }
   ],
   "clubs": [

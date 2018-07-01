@@ -45,7 +45,7 @@ var appController = function ($scope, $http, EmailService) {
     var init = function () {
         for (var i = 0; i < $scope.languages.length; i++) {
             setUpStars($scope.languages[i]);
-            if ($scope.languages[i].frameworks != undefined) {
+            if ($scope.languages[i].frameworks) {
                 for (var j = 0; j < $scope.languages[i].frameworks.length; j++) {
                     setUpStars($scope.languages[i].frameworks[j]);
                 }
@@ -54,18 +54,15 @@ var appController = function ($scope, $http, EmailService) {
         }
     };
 
-    var setUpStars = function (object) {
-        var s = object.proficiency;
-        var n = 5 - s;
-        var arr = []
-        for (var i = 1; i <= s; i++) {
-            arr.push(i)
+    var setUpStars = function (skill) {
+        skill.stars = [false, false, false];
+        for (var level = 1; level <= 3; level++) {
+            if (level <= skill.proficiency) {
+                skill.stars[level - 1] = true;
+            }
         }
-        for (var i = 1; i <= n; i++) {
-            arr.push(i * -1)
-        }
-        object.stars = arr;
-        return object;
+
+        console.log(skill)
     };
 
 

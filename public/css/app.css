@@ -2,21 +2,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
+
 p, div {
     font-family: 'Raleway', sans-serif;
 }
-.mid_nopad{
+
+.mid_nopad {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px
 }
 
-.top_nopad{
+.top_nopad {
     text-align: center;
     margin-bottom: 0px
 }
 
-.bot_nopad{
+.bot_nopad {
     text-align: center;
     margin-top: 0px
 }
@@ -36,19 +38,18 @@ p, div {
     transition: all .7s ease;
 }
 
-.hamburger-line{
+.hamburger-line {
     background-color: #870202;
 }
 
-.shrink .navbar-toggle{
+.shrink .navbar-toggle {
     margin-top: 3px !important;
     -webkit-transition: all .7s ease;
     transition: all .7s ease;
 }
 
-
-.shrink{
-    background:rgba(255,255,255,0.5);
+.shrink {
+    background: rgba(255, 255, 255, 0.5);
     height: 40px !important;
 }
 
@@ -58,8 +59,7 @@ p, div {
     padding-bottom: 10px !important;
 }
 
-
-.scroll-to-patch{
+.scroll-to-patch {
     position: relative;
     top: -40px;
     height: 40px;
@@ -80,76 +80,70 @@ p, div {
     box-shadow: none;
 }
 
-
-#content{
+#content {
     margin-top: 60px;
 }
 
-#header-image{
+#header-image {
     position: relative;
     width: 100%
 }
 
-#header-image img{
+#header-image img {
     width: 100%;
 }
 
-
-.text-in-header{
+.text-in-header {
     position: absolute;
     text-align: center;
     top: 24%;
     width: 100%
 }
 
-#header-image h1{
+#header-image h1 {
     color: #870202;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     text-align: center;
 }
 
-#header-image h3{
+#header-image h3 {
     color: #870202;
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
 
-
-
-.section{
-    padding-bottom:50px;
+.section {
+    padding-bottom: 50px;
 }
 
-.section .container{
+.section .container {
     margin-top: -25px;
 }
 
-
-
-#my-about{
+#my-about {
     background-color: #f0f0f0;
 }
 
-#my-portfolio{
+#my-portfolio {
     background-color: #fff;
 }
 
-#my-resume{
+#my-resume {
     background-color: #C5BBDA;
 }
 
-#my-references{
+#my-references {
     background-color: #f0f0f0;
 }
 
-#my-courses{
+#my-courses {
     background-color: #ffffff;
 }
 
-#my-contact{
+#my-contact {
     background-color: #C5BBDA;
-    padding-bottom:0px;
+    padding-bottom: 0px;
 }
 
 span[class*="glyphicon-one-dot"] {
@@ -158,31 +152,25 @@ span[class*="glyphicon-one-dot"] {
 }
 
 .glyphicon-one-dot-full:before {
-    content:"\25cf";
+    content: "\25cf";
     font-size: 3em;
 }
+
 .glyphicon-one-dot-emptyt:before {
-    content:"\25cb";
+    content: "\25cb";
     font-size: 3em;
 }
-
-
-
 
 /*About Me Styles*/
-#my-about img{
-    width:100%
+#my-about img {
+    width: 100%
 }
 
-#my-about hr{
+#my-about hr {
     border-top: 1px solid white;
 }
 
-
-
-
-
-.tile{
+.tile {
     text-align: center;
     background: rgb(226, 226, 226);
     height: 300px;
@@ -196,51 +184,53 @@ span[class*="glyphicon-one-dot"] {
     text-decoration: none;
 }
 
-.tile:hover{
+.tile:hover {
     color: #FFF;
     text-shadow: black 0.1em 0.1em 0.2em;
-    cursor:pointer
+    cursor: pointer
 
 }
 
-.blurb{
+.blurb {
     padding-top: 0px;
 }
 
-.dj_img:hover{
+.dj_img:hover {
     background-image: url("../assets/gifs/dj_cat.gif ");
     background-size: auto 100%;
 }
 
-.diet_img:hover{
+.diet_img:hover {
     background-image: url("../assets/gifs/diet2.gif ");
     background-size: auto 100%;
 }
 
-.other_img:hover{
+.other_img:hover {
     background-image: url("../assets/gifs/engineering.gif ");
     background-size: 100% 100%;
 }
 
-.concert_img:hover{
+.concert_img:hover {
     background-image: url("../assets/gifs/concert.gif ");
     background-size: 100% 100%;
 }
 
-.dine_img:hover{
+.dine_img:hover {
     background-image: url("../assets/gifs/dine.gif ");
     background-size: 100% 100%;
 }
-.clips_img:hover{
+
+.clips_img:hover {
     background-image: url("../assets/gifs/scrooge.gif ");
     background-size: 100% 100%;
 }
-.backend_img:hover{
+
+.backend_img:hover {
     background-image: url("../assets/gifs/matrix.gif ");
     background-size: 100% 100%;
 }
 
-.title-bar{
+.title-bar {
     text-align: center;
 }
 
@@ -250,7 +240,7 @@ span[class*="glyphicon-one-dot"] {
     margin-left: auto
 }
 
-.my-button{
+.my-button {
     border: solid #FFF;
     border-width: 1px;
     height: 30px;
@@ -261,214 +251,253 @@ span[class*="glyphicon-one-dot"] {
     color: white;
     background: none;
     -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* IE/Edge */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
     user-select: none;
 
 }
 
-.my-button:hover{
+.my-button:hover {
     background-color: white;
     color: darkgrey;
     text-decoration: none;
 }
 
-.my-button:active{
+.my-button:active {
     background-color: whitesmoke;
     color: grey;
     text-decoration: none;
 }
 
-.my-button:focus{
+.my-button:focus {
     color: grey;
     background-color: white;
     text-decoration: none;
 }
 
-.fill-col{
+.fill-col {
     width: 100%
 }
 
 .gly-spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
-  }
-  100% {
-    -o-transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
-#top-detail-section{
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+#top-detail-section {
     margin-top: 0px;
 }
 
-
-.detail-section{
+.detail-section {
     text-align: left;
     margin-top: 50px;
 }
 
-.detail-section h1{
+.detail-section h1 {
     text-align: left;
 }
 
-.detail-section h2{
+.detail-section h2 {
     color: white;
     text-align: right;
 }
 
-.detail-section h3{
+.detail-section h3 {
     text-align: right;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
-.detail-section h4{
-     text-align: right;
-     margin-top: 0px;
- }
+.detail-section h4 {
+    text-align: right;
+    margin-top: 0px;
+}
 
-.detail-section h5{
+.detail-section h5 {
     text-align: right;
 }
 
-
-
-.detail-section p{
+.detail-section p {
     margin-bottom: 3px;
     text-align: right;
 
 }
 
-.detail-section li{
+.detail-section li {
     text-align: left;
 }
 
-.resume-label{
+.resume-label {
     font-weight: bold;
 }
 
-.detail-row{
+.detail-row {
     margin-bottom: 20px
 }
 
-.detail-row hr{
+.detail-row hr {
     border-top: 1px solid grey;
     margin-top: 3px;
     margin-bottom: 3px;
 }
 
-.detail-row p{
+.detail-row p {
     text-align: left;
 }
 
-#my-courses .detail-section h2{
+#my-courses .detail-section h2 {
     color: black;
 }
 
-#programming-languages-section .row{
+#programming-languages-section .row {
     margin: 0
 }
 
-.programming-language-row{
+.programming-language-row {
     margin-bottom: 20px;
 }
 
-
-.icon-link img{
+.icon-link img {
     height: 70px;
 }
 
-
-.confirmation-box h3{
+.confirmation-box h3 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.confirmation-box button{
-    text-align: center;
-    margin-bottom: 30px;
-}
-.confirmation-box span{
+.confirmation-box button {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.spinner{
+.confirmation-box span {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.spinner {
     text-align: center;
 }
 
-@media(max-width: 992px){
-    .detail-section h3{
+@media (max-width: 992px) {
+    .detail-section h3 {
         text-align: center;
         margin-top: 0px;
     }
 
-    .detail-section h2{
+    .detail-section h2 {
         text-align: center;
     }
 
-    .detail-section h4{
+    .detail-section h4 {
         margin-bottom: 3px;
         text-align: center;
     }
 
-    .detail-section p{
+    .detail-section p {
         margin-bottom: 3px;
         text-align: center;
     }
 
-    .detail-row hr{
+    .detail-row hr {
         width: 50%
     }
 
-    .star-section{
-        margin-right: auto;
-        width: 85px;
-        margin-left: auto;
-    }
+    /*.star-section {*/
+        /*margin-right: auto;*/
+        /*width: 85px;*/
+        /*margin-left: auto;*/
+    /*}*/
 }
 
-.project-container{
+.project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.project{
+.project {
     margin: 20px;
+}
+
+.competency {
+    width: 100px;
+    height: 100%;
+}
+
+.competency-header{
+    width: 100px;
+    height: 150px;
+    text-align: center
+}
+
+.competency-headers{
+    height: 3em;
+    display: flex;
+}
+
+.competency > p{
+    text-align: center;
+    font-size: large;
+}
+
+.competency-full {
+    height: 100%;
+    width: 100%;
+    background-color: #002673;
+    border: solid #002673 3px;
+}
+
+.competency-empty {
+    height: 100%;
+    width: 100%;
+    border: solid #002673 3px;
+}
+
+.star-section {
+    display: flex;
+    height: 20px;
 }

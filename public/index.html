@@ -101,7 +101,8 @@
                     want to become an expert teacher and be able to enable others to practice TDD as effectively as my
                     colleagues enabled me.</p>
                 <p>I am very interested in all pieces that go into building great software. I have been working to build
-                    the ability to think in terms of Lean Product Development using build-measure-learn cycles . Building
+                    the ability to think in terms of Lean Product Development using build-measure-learn cycles .
+                    Building
                     tangible products for real users is what excites me the most about software development. I’ve been
                     working on ui-heavy personal projects in my own time to hone my frontend development skills, along
                     with actively practicing backlog management, CI/CD, and design.</p>
@@ -356,48 +357,75 @@
                 </div>
             </div>
             <hr/>
+
+
+            <div class="programming-language-row">
+                <div class="row detail-row">
+                    <div class="col-xs-7 col-xs-offset-4">
+                        <div class="competency-headers">
+                            <div class="competency competency-header"><p>I've Used It</p></div>
+
+                            <div class="competency competency-header"><p>Working Knowledge</p></div>
+
+                            <div class="competency competency-header"><p>I'm Good at it</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div ng-repeat="language in languages" class="programming-language-row">
                 <div class="row detail-row">
-                    <div class="col-md-3 col-md-offset-1">
+                    <div class="col-xs-3 col-xs-offset-1">
                         <h3>
                             {{language.name}}
                         </h3>
                     </div>
-                    <div class="col-md-7 col-xs-4 col-xs-offset-4 col-md-offset-0">
+                    <div class="col-xs-7 col-xs-offset-0">
                         <div class="star-section">
-                                <span ng-repeat="star in language.stars">
-                                    <span class="glyphicon glyphicon-star" ng-if="star >0">
-                                    </span>
-                                <span class="glyphicon glyphicon-star-empty" ng-if="star <0">
-                                    </span>
-                                </span>
+                            <div class="competency">
+                                <div class="competency-full" ng-if="language.stars[0]"></div>
+                                <div class="competency-empty" ng-if="!language.stars[0]"></div>
+                            </div>
+
+                            <div class="competency">
+                                <div class="competency-full" ng-if="language.stars[1]"></div>
+                                <div class="competency-empty" ng-if="!language.stars[1]"></div>
+                            </div>
+
+                            <div class="competency">
+                                <div class="competency-full" ng-if="language.stars[2]"></div>
+                                <div class="competency-empty" ng-if="!language.stars[2]"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--TODO Make the frameworks collapsable or get rid of frameworks-->
                 <div ng-if="language.frameworks">
                     <div class="row framework-detail-row">
-                        <!--<div class="row framework-detail-sub-row">-->
-                        <!--<div class="col-md-3 col-md-offset-1">-->
-                        <!--<h4>-->
-                        <!--Frameworks:-->
-                        <!--</h4>-->
-                        <!--</div>-->
-                        <!--</div>-->
                         <div class="row framework-detail-sub-row">
-                            <div ng-repeat="fw in language.frameworks" class="row">
-                                <div class="col-md-3 col-md-offset-1 col-xs-12">
+                            <div ng-repeat="framework in language.frameworks" class="row">
+                                <div class="col-xs-3 col-xs-offset-1">
                                     <p>
-                                        {{fw.name}}
+                                        {{framework.name}}
                                     </p>
                                 </div>
 
-                                <div class="col-md-7 col-xs-4 col-xs-offset-4 col-md-offset-0">
+                                <div class="col-xs-7 col-xs-offset-0">
                                     <div class="star-section">
-                                            <span ng-repeat="star in fw.stars">
-                                            <span class="glyphicon glyphicon-star" ng-if="star >0"></span>
-                                            <span class="glyphicon glyphicon-star-empty" ng-if="star <0"></span>
-                                            </span>
+                                        <div class="competency">
+                                            <div class="competency-full" ng-if="framework.stars[0]"></div>
+                                            <div class="competency-empty" ng-if="!framework.stars[0]"></div>
+                                        </div>
+
+                                        <div class="competency">
+                                            <div class="competency-full" ng-if="framework.stars[1]"></div>
+                                            <div class="competency-empty" ng-if="!framework.stars[1]"></div>
+                                        </div>
+
+                                        <div class="competency">
+                                            <div class="competency-full" ng-if="framework.stars[2]"></div>
+                                            <div class="competency-empty" ng-if="!framework.stars[2]"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
