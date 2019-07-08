@@ -1,6 +1,7 @@
 import React from "react";
 import {projects} from "../data";
 import styled from 'styled-components'
+import {Section} from "../components/Section";
 
 const tileSize = "300px";
 
@@ -17,6 +18,7 @@ const ProjectTile = styled.div`
     margin: 1rem;
     
     position: relative;
+    
     :hover {
         color: #FFF;
         text-shadow: black 0.1em 0.1em 0.2em;
@@ -52,6 +54,7 @@ const ProjectTileContent = styled.div`
 
 
 const Project = ({project}) =>
+
     <ProjectTileLink target="_blank" href={project.link} className="tile-link">
         <ProjectTile>
             <ProjectImg src={require(`../assets/${project.imgPath}`)}/>
@@ -66,6 +69,9 @@ const Project = ({project}) =>
         </ProjectTile>
     </ProjectTileLink>;
 
-export const Projects = () => <ProjectsContainer>
-    {projects.map(it => <Project project={it}/>)}
-</ProjectsContainer>;
+export const Projects = () =>
+    <Section title={"Portfolio"} dividerColor={"f0f0f0"} color={"fff"} id={'portfolio'}>
+        <ProjectsContainer>
+            {projects.map(it => <Project key={it.title} project={it}/>)}
+        </ProjectsContainer>
+    </Section>;

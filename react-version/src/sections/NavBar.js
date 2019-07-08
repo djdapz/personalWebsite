@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 const NavBarContainer = styled.nav`
 
-    background: ${props => props.shrink ? "rgba(255, 255, 255, 0.65)" : "transparent"};
-    border-color: ${props => props.shrink ? "rgba(255, 255, 255, 0.65)" : "transparent"};
+    background: ${props => props.shrink ? "white" : "transparent"};
     height: ${props => props.shrink ? "2.5rem" : "3.25rem"};
     
     -webkit-transition: all 0.7s ease;
@@ -48,16 +47,6 @@ const NavBarLink = styled.a`
 const NavBarTitle = styled(NavBarLink)`
   font-size: 1.125rem;
 `;
-
-
-// export const HamburgerLine = styled.span`
-//     background-color: #870202;
-//     display: block;
-//     width: 22px;
-//     height: 2px;
-//     border-radius: 1px;
-// `;
-//
 
 export const NavBar = () => {
 

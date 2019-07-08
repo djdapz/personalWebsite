@@ -6,7 +6,7 @@ const OuterContiner = styled.div`
   
   padding:  2rem 6rem;
   
-`
+`;
 
 const InnerContainer = styled.div`
   display: flex;
@@ -16,22 +16,33 @@ const InnerContainer = styled.div`
   
   margin-left: auto;
   margin-right: auto;
-`
+`;
 
 const Underline = styled.hr`
   border: .5px solid ${props => props.color || "#fff"};
   width: 40rem;
   margin-bottom: 2rem;
-`
+`;
 
-export const Section = ({children, title, color, dividerColor}) =>
-    <OuterContiner color={color}>
+const SectionTitleBar = styled.div`
+  text-align: center;
+`;
+
+const ButtonWrapper = styled.span`
+  float: right;
+`;
+
+export const Section = ({children, title, color, dividerColor, id, button}) =>
+    <OuterContiner color={color} id={id}>
         <InnerContainer>
-            <div className="title-bar">
+            <SectionTitleBar>
                 <h1>
                     {title}
+                    <ButtonWrapper>
+                        {button}
+                    </ButtonWrapper>
                 </h1>
-            </div>
+            </SectionTitleBar>
             <Underline color={dividerColor}/>
             {children}
 

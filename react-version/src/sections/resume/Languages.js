@@ -1,4 +1,4 @@
-import {languages} from "../data";
+import {languages} from "../../data";
 import React from "react";
 import {Copmetency, Frameworks} from "./Frameworks";
 
@@ -22,6 +22,6 @@ const Language = ({language}) =>
 
 export const Lanugages = () => <>
     {languages.map(language => {
-        return <Language language={language}/>
+        return <Language key={language.name} language={language}/>
     })}
 </>
