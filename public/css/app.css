@@ -23,20 +23,6 @@ p, div {
     margin-top: 0px
 }
 
-.navbar {
-    background-color: transparent;
-    background: transparent;
-    border-color: transparent;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    min-height: 40px !important;
-}
-
-.navbar a {
-    color: #870202;
-    -webkit-transition: all .7s ease;
-    transition: all .7s ease;
-}
 
 .hamburger-line {
     background-color: #870202;
@@ -170,26 +156,8 @@ span[class*="glyphicon-one-dot"] {
     border-top: 1px solid white;
 }
 
-.tile {
-    text-align: center;
-    background: rgb(226, 226, 226);
-    height: 300px;
-    width: 300px;
-    color: black;
-    padding: 40px;
 
-}
 
-.tile-link:hover {
-    text-decoration: none;
-}
-
-.tile:hover {
-    color: #FFF;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    cursor: pointer
-
-}
 
 .blurb {
     padding-top: 0px;
