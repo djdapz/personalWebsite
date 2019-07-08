@@ -1,9 +1,9 @@
 import React from "react";
 import {jobs} from "../../data"
-import {Divider, SubSectionRow, SubSectionText} from "../../components/SubSection";
+import { Divider, SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
 
 export const Jobs = () =>
-    <>
+    <SubSection title={'WORK EXPERIENCE'}>
         {jobs.map((job, index) =>
             <SubSectionRow key={index + job.name} name={job.name}>
                 <SubSectionText>
@@ -21,6 +21,6 @@ export const Jobs = () =>
                 {index !== jobs.length - 1 && <br/>}
             </SubSectionRow>
         )}
-    </>;
+    </SubSection>;
 
 

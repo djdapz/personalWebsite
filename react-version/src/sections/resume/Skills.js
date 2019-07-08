@@ -1,12 +1,12 @@
 import {skills} from "../../data";
 import React from "react"
-import {SubSectionRow, SubSectionText,} from "../../components/SubSection";
+import { SubSection, SubSectionRow, SubSectionText, } from '../../components/SubSection'
 
 
-export const Skills = () => <>
+export const Skills = () => <SubSection title={'TECHNOLOGIES AND SKILLS'}>
     {skills.map(skill => <SubSectionRow key={skill.name}>
         <SubSectionText>
             {skill.name}
         </SubSectionText>
     </SubSectionRow>)}
-</>;
+</SubSection>;

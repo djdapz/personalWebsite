@@ -1,6 +1,6 @@
 import {awards} from "../../data";
 import React from "react"
-import {SubSectionRow, SubSectionText} from "../../components/SubSection";
+import { SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
 
 const Award = ({award}) =>
     <SubSectionRow name={award.name}>
@@ -9,7 +9,7 @@ const Award = ({award}) =>
         </SubSectionText>
     </SubSectionRow>;
 
-export const Awards = () => <div>
+export const Awards = () => <SubSection title={'RECOGNITIONS'}>
     {awards.map(award => <Award award={award} key={award.name}/>)}
-</div>;
+</SubSection>;
 

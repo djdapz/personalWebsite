@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const NavBarContainer = styled.nav`
 
-    background: ${props => props.shrink ? "white" : "transparent"};
-    height: ${props => props.shrink ? "2.5rem" : "3.25rem"};
+    background: ${props => props.shrink ? 'white' : 'transparent'};
+    height: ${props => props.shrink ? '2.5rem' : '3.25rem'};
     
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
@@ -19,12 +19,12 @@ const NavBarContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-`;
+`
 
 const NavBarItems = styled.div`
     height: inherit;
     display: flex;  
-`;
+`
 
 const NavBarLink = styled.a`
     display: flex;
@@ -42,36 +42,34 @@ const NavBarLink = styled.a`
         background-color: rgb(240, 240, 240);;
         color: black;
     }
-`;
+`
 
 const NavBarTitle = styled(NavBarLink)`
   font-size: 1.125rem;
-`;
+`
 
 export const NavBar = () => {
 
+  const [shrink, setShrink] = useState(false)
 
-    const [shrink, setShrink] = useState(false);
+  const handleScroll = () => window.pageYOffset > 400 ? setShrink(true) : setShrink(false)
 
-    const handleScroll = () => window.pageYOffset > 400 ? setShrink(true) : setShrink(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-    }, []);
+  return <NavBarContainer shrink={shrink}>
+    <NavBarTitle href="#header-image">
+      Devon D'Apuzzo
+    </NavBarTitle>
 
+    <NavBarItems>
+      <NavBarLink href="#about">ABOUT ME</NavBarLink>
+      <NavBarLink href="#portfolio">PORTFOLIO</NavBarLink>
+      <NavBarLink href="#resume">RESUME</NavBarLink>
+      <NavBarLink href="#courses">COURSES</NavBarLink>
+      <NavBarLink href="#contact">CONTACT</NavBarLink>
+    </NavBarItems>
 
-    return <NavBarContainer shrink={shrink}>
-        <NavBarTitle href="#header-image">
-            Devon D'Apuzzo
-        </NavBarTitle>
-
-        <NavBarItems>
-            <NavBarLink href="#about">ABOUT ME</NavBarLink>
-            <NavBarLink href="#portfolio">PORTFOLIO</NavBarLink>
-            <NavBarLink href="#resume">RESUME</NavBarLink>
-            <NavBarLink href="#courses">COURSES</NavBarLink>
-            <NavBarLink href="#contact">CONTACT</NavBarLink>
-        </NavBarItems>
-
-    </NavBarContainer>;
-};
+  </NavBarContainer>
+}
