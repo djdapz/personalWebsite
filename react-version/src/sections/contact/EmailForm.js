@@ -26,7 +26,6 @@ const CleanerInputs = `
    :focus{
     outline-color: #fff;
   }
-  
 `
 
 const FormInput = styled.input`
@@ -44,6 +43,10 @@ const FormTextArea = styled.textarea`
   min-height: 3rem;
   max-width: 29rem;
   min-width: 29rem;
+`
+
+const FormButton = styled(MyButton)`
+  ${CleanerInputs}
 `
 
 const Form = ({ setStatus }) => {
@@ -91,7 +94,7 @@ const Form = ({ setStatus }) => {
       placeholder="Message"
       value={message}
       onChange={setMessage}/>
-    <MyButton disabled={!isValid} onClick={sendEmail}>Send Email</MyButton>
+    <FormButton disabled={!isValid} onClick={sendEmail}>Send Email</FormButton>
   </ContactForm>
 }
 

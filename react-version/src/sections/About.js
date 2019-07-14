@@ -13,17 +13,19 @@ const AboutSection = styled.div`
 `;
 
 const PicOfMe = styled.img`
-  max-width: 40rem;
+
   object-fit: scale-down;
  
   
    @media (min-width: 1000px) {
       padding: 0 3rem;
       float: left;  
+      max-width: 40rem;
   }
   @media (max-width: 1000px){
       margin-right: auto;
       margin-left: auto;
+      max-width: 100%;
   }
 `;
 

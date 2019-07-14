@@ -7,9 +7,7 @@ export const Jobs = () =>
         {jobs.map((job, index) =>
             <SubSectionRow key={index + job.name} name={job.name}>
                 <SubSectionText>
-                    {job.start}
-                    {job.end && <span>to {job.end}</span>}
-                    | {job.location}
+                    {`${job.start} ${job.end ? ` to ${job.end}` : ""} | ${job.location}`}
                 </SubSectionText>
                 <SubSectionText>
                         <span className="resume-label">

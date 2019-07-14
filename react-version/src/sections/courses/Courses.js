@@ -6,7 +6,7 @@ import {SubSection, SubSectionRow, SubSectionText} from "../../components/SubSec
 
 
 export const Courses = () =>
-    <Section title={"Courses"} lightBackground={true} id={"courses"}>
+    <Section title={"Courses"} hideDivider lightBackground={true} id={"courses"}>
         <SubSection title={"COMPUTER SCIENCE"} lightBackground={true}>
             <Classes classes={cs}/>
         </SubSection>

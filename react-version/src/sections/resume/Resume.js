@@ -8,13 +8,14 @@ import { Awards } from './Awards'
 import React from 'react'
 
 import pdf from '../../assets/pdfs/resume.pdf'
+import { MyButton } from '../../components/MyButton'
 
-const PdfVersion = () => <a className="my-button" href={pdf} rel="noopener noreferrer" target="_blank">
+const PdfVersion = () => <MyButton className="my-button" href={pdf} rel="noopener noreferrer" target="_blank">
   PDF Version
-</a>
+</MyButton>
 
 export const Resume = () =>
-  <Section title={'Rèsumè'} color={'#C5BBDA'} id={'resume'} button={<PdfVersion/>}>
+  <Section title={'Rèsumè'} hideDivider color={'#C5BBDA'} id={'resume'} button={<PdfVersion/>}>
     <Jobs/>
     <Schools/>
     <Lanugages/>

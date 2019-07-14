@@ -1,7 +1,6 @@
 import React from 'react'
 import { schools } from '../../data'
 import { SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
-import { Section } from '../../components/Section'
 
 const School = ({ school }) => <SubSectionRow name={school.name}>
   <SubSectionText>
