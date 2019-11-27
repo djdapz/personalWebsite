@@ -1,8 +1,8 @@
-import { languages } from '../../data'
 import React from 'react'
 import { Frameworks } from './Frameworks'
 import { SubSection, SubSectionRow } from '../../components/SubSection'
 import styled from 'styled-components'
+import { languages } from '../../data/technicalSkills'
 
 const CompetencyHeader = styled.p`
   width: 10rem;

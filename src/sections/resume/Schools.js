@@ -1,5 +1,5 @@
 import React from 'react'
-import { schools } from '../../data'
+import { schools } from '../../data/schools'
 import { SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
 
 const School = ({ school }) => <SubSectionRow name={school.name}>

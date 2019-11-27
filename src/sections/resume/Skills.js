@@ -1,4 +1,4 @@
-import {skills} from "../../data";
+import {skills} from "../../data/technicalSkills";
 import React from "react"
 import { SubSection, SubSectionRow, SubSectionText, } from '../../components/SubSection'
 

@@ -1,6 +1,6 @@
-import { clubs } from '../../data'
 import React from 'react'
 import { SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
+import { clubs } from '../../data/courses'
 
 const ClubList = ({ club }) => <p>
     <span>
