@@ -5,7 +5,8 @@ import { jobs } from '../../data/jobs'
 export const Jobs = () =>
   <SubSection title={'WORK EXPERIENCE'}>
     {jobs.map((job, index) =>
-      <SubSectionRow key={index + job.name} name={job.name}>
+      <SubSectionRow key={index + job.name}
+                     name={job.name}>
         <SubSectionText>
           {`${job.start} ${job.end ? ` to ${job.end}` : ''} | ${job.location}`}
         </SubSectionText>
@@ -14,8 +15,19 @@ export const Jobs = () =>
                             Position:
                         </span> {job.title}
         </SubSectionText>
-        {job.description && <Divider/>}
-        {job.description && <SubSectionText>{job.description} </SubSectionText>}
+        <Divider/>
+        {job.description &&
+        <SubSectionText>
+          {job.description}
+        </SubSectionText>
+        }
+        {job.list && <>
+          <SubSectionText>
+            <ul>
+              {job.list.map(it => <li>{it}</li>)}
+            </ul>
+          </SubSectionText>
+        </>}
         {index !== jobs.length - 1 && <br/>}
       </SubSectionRow>
     )}

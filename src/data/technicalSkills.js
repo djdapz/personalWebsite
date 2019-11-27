@@ -8,11 +8,16 @@ export const categorizedSkills = [
       'Continuous Integration & Delivery',
       'Domain Driven Design',
       'User Centered Design',
+      //TODO - Link Eric Reis
+      'Lean Product',
+      //TODO - Link 12 factor
       'Cloud Native & 12 Factor Architecture',
+      //TODO - LInk paird programming reesarch
       'Paired Programming',
       //TODO - Find balanced team video
       'Balanced Team (high collaboration with product and design)',
       'Extreme Programming',
+      //TODO - Link TBD
       'Trunk Based Development'
     ]
   },

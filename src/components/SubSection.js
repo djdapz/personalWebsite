@@ -36,8 +36,7 @@ export const RightSide = styled.div`
 
 export const Divider = styled.hr`
     border: .5px solid ${props => props.lightBackground ? 'black' : 'white'};
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+    margin: .5rem 0;
 `
 
 const SubsectionRowTitle = styled.h3`
