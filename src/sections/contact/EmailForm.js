@@ -48,7 +48,7 @@ const FormTextArea = styled.textarea`
 const FormButton = styled(MyButton)`
   ${CleanerInputs}
 `
-
+const setWithEvent = (set) => (e) => set(e.target.value)
 const Form = ({ setStatus }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -58,6 +58,7 @@ const Form = ({ setStatus }) => {
 
   const sendEmail = () => {
     setStatus('SENDING')
+  debugger
     axios.post('www.djdapz-email.com/email', {
       to: ['djdapz@aol.com'],
       from: email,
@@ -78,22 +79,22 @@ const Form = ({ setStatus }) => {
         className="form-control"
         id="contact_email"
         placeholder="Email Address"
-        value={name}
-        onChange={setEmail}/>
+        value={email}
+        onChange={setWithEvent(setEmail)}/>
       <FormInput
         type="text"
         className="form-control"
         id="contact_name"
         placeholder="Name"
         value={name}
-        onChange={setName}/>
+        onChange={setWithEvent(setName)}/>
     </FormGroup>
     <FormTextArea
       className="form-control"
       id="contact_message"
       placeholder="Message"
       value={message}
-      onChange={setMessage}/>
+      onChange={setWithEvent(setMessage)}/>
     <FormButton disabled={!isValid} onClick={sendEmail}>Send Email</FormButton>
   </ContactForm>
 }

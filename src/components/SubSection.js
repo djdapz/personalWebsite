@@ -56,7 +56,7 @@ export const SubSectionText = styled.p`
 
 export const SubSectionRow = ({ name, children }) =>
   <ResumeRow className="row detail-row">
-    <LeftSide className="col-md-3 col-md-offset-1">
+    <LeftSide>
       <SubsectionRowTitle>
         {name}
       </SubsectionRowTitle>
