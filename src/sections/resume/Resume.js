@@ -1,7 +1,7 @@
 import { Section } from '../../components/Section'
 import { Jobs } from './Jobs'
 import { Schools } from './Schools'
-import { Lanugages } from './Languages'
+import { Languages } from './Languages'
 import { Skills } from './Skills'
 import { Clubs } from './Clubs'
 import { Awards } from './Awards'
@@ -18,7 +18,7 @@ export const Resume = () =>
   <Section title={'Rèsumè'} hideDivider color={'#C5BBDA'} id={'resume'} button={<PdfVersion/>}>
     <Jobs/>
     <Schools/>
-    <Lanugages/>
+    <Languages/>
     <Skills/>
     <Clubs/>
     <Awards/>

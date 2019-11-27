@@ -53,18 +53,23 @@ const SubSectionTitle = styled.h2`
 export const SubSectionText = styled.p`
  margin: 0;
 `
-
-export const SubSectionRow = ({ name, children }) =>
+export const RowWithGutter = ({ left, right }) =>
   <ResumeRow className="row detail-row">
     <LeftSide>
-      <SubsectionRowTitle>
-        {name}
-      </SubsectionRowTitle>
+      {left}
     </LeftSide>
     <RightSide>
-      {children}
+      {right}
     </RightSide>
   </ResumeRow>
+
+export const SubSectionRow = ({ name, children }) =>
+  <RowWithGutter
+    left={<SubsectionRowTitle>
+      {name}
+    </SubsectionRowTitle>}
+    right={children}
+  />
 
 export const SubSection = ({ title, children, lightBackground }) => <div>
   <ResumeRow>

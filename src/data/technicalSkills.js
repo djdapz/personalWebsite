@@ -1,135 +1,203 @@
+export const categorizedSkills = [
+  {
+    category: 'Preferred Practices',
+    content: [
+      'Test Driven Development',
+      'Clean Code',
+      'Continuous Refactoring',
+      'Continuous Integration & Delivery',
+      'Domain Driven Design',
+      'User Centered Design',
+      'Cloud Native & 12 Factor Architecture',
+      'Paired Programming',
+      //TODO - Find balanced team video
+      'Balanced Team (high collaboration with product and design)',
+      'Extreme Programming',
+      'Trunk Based Development'
+    ]
+  },
+  {
+    category: 'CI/CD Tools',
+    content: [
+      'Concourse',
+      'Jenkins',
+      'GitLab CI',
+      'Bamboo'
+    ]
+  },
+  {
+    category: 'Deployment Environments',
+    content: [
+      'Pivotal Cloud Foundry',
+      'Heroku',
+      'AWS (s3, ec2)'
+    ]
+  },
+  {
+    category: 'Patterns',
+    content: [
+      'Event Driven Architecture',
+      'REST APIs',
+      'Single Page Web Application',
+      '12 Factor Applications',
+      'Microservices',
+      'SOLID',
+      'Functional Programming',
+      'Object Oriented Programming'
+    ]
+  },
+  {
+    category: 'Tools',
+    content: [
+      'Git',
+      'RabbitMQ',
+      'intelliJ',
+      'macOS/Linux',
+      'Postgres, MariaDB, MySQL',
+      'Gradle',
+      'npm'
+    ]
+  }
+]
 
 export const skills = [
   {
-    "name": "Git"
+    'name': 'Git'
   },
   {
-    "name": "Pivotal Cloud Foundry"
+    'name': 'Pivotal Cloud Foundry'
   },
   {
-    "name": "Heroku"
+    'name': 'Heroku'
   },
   {
-    "name": "CI/CD"
+    'name': 'CI/CD'
   },
   {
-    "name": "Bamboo"
+    'name': 'Bamboo'
   },
   {
-    "name": "Concourse"
+    'name': 'Concourse'
   },
   {
-    "name": "Gradle"
+    'name': 'Gradle'
   },
   {
-    "name": "Perforce"
+    'name': 'Perforce'
   },
   {
-    "name": "SQL (MariaDB & PostgreSQL)"
+    'name': 'SQL (MariaDB & PostgreSQL)'
   },
   {
-    "name": "Rabbit MQ"
+    'name': 'Rabbit MQ'
   },
   {
-    "name": "Event Based Architecture"
+    'name': 'Event Based Architecture'
   },
   {
-    "name": "Microservices"
+    'name': 'Microservices'
   },
   {
-    "name": "SOLID Design Principles"
+    'name': 'SOLID Design Principles'
   },
   {
-    "name": "Object Oriented Programming & Design"
+    'name': 'Object Oriented Programming & Design'
   },
   {
-    "name": "Test Driven Development"
+    'name': 'Test Driven Development'
   },
   {
-    "name": "Consumer Driven Contracts"
+    'name': 'Consumer Driven Contracts'
   },
   {
-    "name": "Paired Programming"
+    'name': 'Paired Programming'
   },
   {
-    "name": "JUnit"
+    'name': 'JUnit'
   },
   {
-    "name": "User Centered Design"
+    'name': 'User Centered Design'
   },
   {
-    "name": "Data Structures"
+    'name': 'Data Structures'
   },
   {
-    "name": "Machine Learning Techniques"
+    'name': 'Machine Learning Techniques'
   },
   {
-    "name": "Audio Processing"
+    'name': 'Audio Processing'
   },
   {
-    "name": "Graphic Design (Adobe Photoshop and Illustrator)"
+    'name': 'Graphic Design (Adobe Photoshop and Illustrator)'
   }
 ]
 export const languages = [
   {
-    "name": "Java 8",
-    "proficiency": 3,
-    "frameworks": [
-      {
-        "name": "Spring",
-        "proficiency": 3
-      }
+    description: 'My Favorite Tools',
+    languages: [
+      'Kotlin',
+      'Java',
+      'Typescript',
+      'Javascript',
+      'HTML',
+      'CSS',
+      'SQL',
+
+    ],
+    libraries: [
+      'Spring',
+      'React',
+      'Redux',
+      'JUnit 4 & 5',
+      'Cypress',
+      'Mockito',
+      'Rest Assured',
+      'Mocha/Chai',
+      'React Testing Library'
     ]
   },
   {
-    "name": "Kotlin",
-    "proficiency": 3
-  },
-  {
-    "name": "HTML",
-    "proficiency": 3
-  },
-  {
-    "name": "CSS",
-    "proficiency": 3
-  },
-  {
-    "name": "Javascript",
-    "proficiency": 3,
-    "frameworks": [
-      {
-        "name": "Redux",
-        "proficiency": 3
-      },
-      {
-        "name": "React",
-        "proficiency": 3
-      },
-      {
-        "name": "Node",
-        "proficiency": 2
-      },
-      {
-        "name": "Express",
-        "proficiency": 2
-      },
-      {
-        "name": "Angular.JS",
-        "proficiency": 2
-      }
+    description: 'Can Roll With',
+    languages: [
+      'Python'
+    ],
+    libraries: [
+      'Angular',
+      'Jasmine',
+      'Pupeteer',
+      'Jest',
+      'Enzyme',
+      'Vue',
+      'Netflix Conductor',
     ]
   },
   {
-    "name": "Python",
-    "proficiency": 2,
-    "frameworks": null
+    description: 'I\'ve Used it, but not for a while',
+    languages: [
+      'C++',
+      'C#'
+    ],
+    libraries: [
+      'Angular.JS',
+      'Spring Cloud Contracts',
+      'Spring Cloud Config',
+      'Netflix Eureka',
+    ]
   },
   {
-    "name": "C++",
-    "proficiency": 1
+    description: 'Actively learning',
+    languages: [
+      'Haskell',
+    ],
+    libraries: []
   },
   {
-    "name": "Haskell",
-    "proficiency": 1
+    description: 'Interested in',
+    languages: [
+      'Go',
+      'Elm',
+      'Clojure'
+    ],
+    libraries: []
   }
 ]
