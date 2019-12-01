@@ -59,7 +59,7 @@ const Form = ({ setStatus }) => {
   const sendEmail = () => {
     setStatus('SENDING')
   debugger
-    axios.post('www.djdapz-email.com/email', {
+    axios.post('https://djdapz-email.cfapps.io/email', {
       to: ['djdapz@aol.com'],
       from: email,
       name,
