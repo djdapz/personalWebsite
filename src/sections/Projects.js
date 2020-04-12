@@ -2,6 +2,7 @@ import React from 'react'
 import { projects } from '../data/projects'
 import styled from 'styled-components'
 import { Section } from '../components/Section'
+import { SubSection } from '../components/SubSection'
 
 const tileSize = '300px'
 
@@ -73,9 +74,14 @@ export const Projects = () =>
   <Section title={'Portfolio'}
            color={'fff'}
            id={'portfolio'}
-           dividerColor={'#870202;'}>
-    <ProjectsContainer>
-      {projects.map(it => <Project key={it.title}
-                                   project={it}/>)}
-    </ProjectsContainer>
+           dividerColor={'#870202'}>
+    {projects.map(projectList =>
+      <SubSection title={projectList.title}
+                  color={'#870202'}>
+        <ProjectsContainer>
+          {projectList.projects.map(it => <Project key={it.title}
+                                                   project={it}/>)}
+        </ProjectsContainer>
+      </SubSection>
+    )}
   </Section>
