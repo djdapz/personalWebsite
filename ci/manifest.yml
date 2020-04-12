@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: website
+  - name: devon-dapuzzo-dot-com
     memory: 256MB
     instances: 1
     path: ../app
