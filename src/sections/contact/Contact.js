@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Section } from '../../components/Section'
-import { Divider } from '../../components/SubSection'
 
 import linkedIn from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
