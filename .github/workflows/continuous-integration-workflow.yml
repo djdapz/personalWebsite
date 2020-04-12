@@ -1,9 +1,9 @@
-name: Greet Everyone
+name: CI is great
 on: [push]
 
 jobs:
   build:
-    name: Greeting
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,3 +14,8 @@ jobs:
         run: npm i
       - name: Build Artifact
         run: npm run build
+      - name: Save artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: build
