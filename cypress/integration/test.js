@@ -3,7 +3,7 @@ describe('Personal Website', () => {
     cy.server()
     cy.visit('/')
     cy.route({
-      url: 'www.djdapz-email.com/email',
+      url: 'https://djdapz-email.cfapps.io/email',
       method: 'POST',
       response: 'yo'
     }).as('sendEmail')
@@ -16,6 +16,7 @@ describe('Personal Website', () => {
     cy.get('#contact_message').type('Hello what\'s good')
 
     cy.contains('Send Email').click()
+
     cy.wait('@sendEmail').then(xhr => {
       expect(xhr.requestBody).to.eql({
         to: ['djdapz@aol.com'],

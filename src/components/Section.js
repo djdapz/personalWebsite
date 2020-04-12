@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const OuterContiner = styled.div`
+const OuterContiner = styled.section`
   background-color: ${props => props.color || '#fff'};
   padding:  2rem 6rem;
   
 `
 
-const InnerContainer = styled.div`
+const InnerContainer = styled.article`
   display: flex;
   flex-direction: column;
   
@@ -35,7 +35,8 @@ const ButtonWrapper = styled.span`
 `
 
 export const Section = ({ children, hideDivider, title, color, dividerColor, id, button }) =>
-  <OuterContiner color={color} id={id}>
+  <OuterContiner color={color}
+                 id={id}>
     <InnerContainer>
       <SectionTitleBar>
         <h1>

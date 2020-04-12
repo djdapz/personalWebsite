@@ -58,17 +58,18 @@ const Form = ({ setStatus }) => {
 
   const sendEmail = () => {
     setStatus('SENDING')
-  debugger
     axios.post('https://djdapz-email.cfapps.io/email', {
       to: ['djdapz@aol.com'],
       from: email,
       name,
       message
     })
-      .then(() => setEmail(''))
-      .then(() => setName(''))
-      .then(() => setMessage(''))
-      .then(() => setStatus('SUCCESS'))
+      .then(() => {
+        setEmail('')
+        setName('')
+        setMessage('')
+        setStatus('SUCCESS')
+      })
       .catch(() => setStatus('FAILED'))
   }
 
@@ -95,7 +96,8 @@ const Form = ({ setStatus }) => {
       placeholder="Message"
       value={message}
       onChange={setWithEvent(setMessage)}/>
-    <FormButton disabled={!isValid} onClick={sendEmail}>Send Email</FormButton>
+    <FormButton disabled={!isValid}
+                onClick={sendEmail}>Send Email</FormButton>
   </ContactForm>
 }
 
@@ -103,10 +105,21 @@ const Sending = () => <SubSectionRow name={'Sending'}>
   <span className="glyphicon glyphicon-refresh gly-spin"/>
 </SubSectionRow>
 
-const Success = ({ sendAnother }) => <SubSectionRow name={'Email Sent'}>
-  <MyButton onClick={sendAnother} className="my-button fill-col">Send Another
-  </MyButton>
-</SubSectionRow>
+const EmailSent = styled.h3`
+  margin: 0 2rem;
+`
+
+const SentRow = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 0 1rem 0;
+`
+const Success = ({ sendAnother }) => <SentRow>
+  <EmailSent>Email Sent</EmailSent>
+  <MyButton onClick={sendAnother}
+            className="my-button fill-col">Send Another</MyButton>
+</SentRow>
 
 const Error = ({ sendAnother }) => <div>
   ERROR
