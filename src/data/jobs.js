@@ -6,12 +6,12 @@ export const jobs = [
     'location': 'Chicago, IL',
     'title': 'Software Engineer',
     'list': [
-      'Partnered with client teams to co-create software. Built web applications, event driven microservices, mapping tools, and DevOps automation engines.',
-      'Enabled client teams to operate as an effective product team using XP and Lean Practices.',
-      'Worked closely with Product Mangers, Product Designers and business stakeholders.',
-      //TODO - Fact check fortune
-      'Taught Cloud Native Development (Java/Spring) courses to developers and architects from fortune 100 companies',
-      'Worked with clients in industries ranging from Banking, Credit Card, Tech, Aerospace, Insurance, and Military.'
+      'Partnered with client teams to co-create software. Built web applications, event driven microservices, mapping tools, and DevOps automation engines',
+      'Lead architectural efforts and technical side of teams',
+      'Enabled client teams to operate as an effective product team using XP and Lean Practices',
+      'Collaborated closely with Product Mangers, Product Designers and business stakeholders',
+      'Taught Cloud Native Development (Java/Spring) courses to developers and architects',
+      'Worked with clients in industries ranging from Banking, Credit Card, Tech, Aerospace, Insurance, and Military'
     ]
   },
   {
