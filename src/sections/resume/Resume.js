@@ -5,6 +5,7 @@ import { Languages } from './Languages'
 import { Skills } from './Skills'
 import { Clubs } from './Clubs'
 import { Awards } from './Awards'
+import { Certifications } from './Certifications'
 import React from 'react'
 
 import pdf from '../../assets/pdfs/resume.pdf'
@@ -17,6 +18,7 @@ const PdfVersion = () => <MyButton className="my-button" href={pdf} rel="noopene
 export const Resume = () =>
   <Section title={'Rèsumè'} hideDivider color={'#C5BBDA'} id={'resume'} button={<PdfVersion/>}>
     <Jobs/>
+    <Certifications/>
     <Schools/>
     <Languages/>
     <Skills/>

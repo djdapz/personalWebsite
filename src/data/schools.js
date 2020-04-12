@@ -38,5 +38,3 @@ export const awards = [
     'description': 'My four-person group’s design was recognized for excellence in design at Northwestern University’s Design Expo.'
   }
 ]
-
-

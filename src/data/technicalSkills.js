@@ -65,77 +65,11 @@ export const categorizedSkills = [
   }
 ]
 
-export const skills = [
-  {
-    'name': 'Git'
-  },
-  {
-    'name': 'Pivotal Cloud Foundry'
-  },
-  {
-    'name': 'Heroku'
-  },
-  {
-    'name': 'CI/CD'
-  },
-  {
-    'name': 'Bamboo'
-  },
-  {
-    'name': 'Concourse'
-  },
-  {
-    'name': 'Gradle'
-  },
-  {
-    'name': 'Perforce'
-  },
-  {
-    'name': 'SQL (MariaDB & PostgreSQL)'
-  },
-  {
-    'name': 'Rabbit MQ'
-  },
-  {
-    'name': 'Event Based Architecture'
-  },
-  {
-    'name': 'Microservices'
-  },
-  {
-    'name': 'SOLID Design Principles'
-  },
-  {
-    'name': 'Object Oriented Programming & Design'
-  },
-  {
-    'name': 'Test Driven Development'
-  },
-  {
-    'name': 'Consumer Driven Contracts'
-  },
-  {
-    'name': 'Paired Programming'
-  },
-  {
-    'name': 'JUnit'
-  },
-  {
-    'name': 'User Centered Design'
-  },
-  {
-    'name': 'Data Structures'
-  },
-  {
-    'name': 'Machine Learning Techniques'
-  },
-  {
-    'name': 'Audio Processing'
-  },
-  {
-    'name': 'Graphic Design (Adobe Photoshop and Illustrator)'
-  }
+export const certifications = [
+  'Pivotal Certified Developer Java',
+  'Pivotal Certified Instructor | PAL for Developers (Java)',
 ]
+
 export const languages = [
   {
     description: 'My Favorite Tools',
