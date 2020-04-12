@@ -39,4 +39,4 @@ jobs:
           CF_USERNAME: ${{ secrets.cfUsername }}
           CF_PASSWORD: ${{ secrets.cfPassword }}
           CF_API: ${{ secrets.cfApi }}
-        args: push -f manifest.yml
+        run: push -f manifest.yml
