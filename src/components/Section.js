@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { SectionDivider } from './Divider'
 
 const OuterContiner = styled.section`
   background-color: ${props => props.color || '#fff'};
@@ -17,11 +18,6 @@ const InnerContainer = styled.article`
   margin-right: auto;
 `
 
-const Underline = styled.hr`
-  border: .5px solid ${props => props.color || '#fff'};
-  width: 100%;
-  margin-bottom: 2rem;
-`
 
 const SectionTitleBar = styled.div`
   text-align: center;
@@ -36,7 +32,7 @@ const ButtonWrapper = styled.span`
 const SectionHeader = styled.h1`
   font-size: 2rem;
   margin: 1rem 0;
-  font-weight: lighter;
+  font-weight: 900;
   color: ${props => props.color}
 `
 
@@ -53,7 +49,7 @@ export const Section = ({ children, title, color, dividerColor, id, button }) =>
         </SectionHeader>
       </SectionTitleBar>
 
-      {<Underline color={dividerColor}/>}
+      {<SectionDivider color={dividerColor}/>}
       {children}
 
     </InnerContainer>

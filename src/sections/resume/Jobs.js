@@ -1,9 +1,11 @@
 import React from 'react'
-import { Divider, SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
+import { SubSection, SubSectionRow, SubSectionText } from '../../components/SubSection'
 import { jobs } from '../../data/jobs'
+import { Divider } from '../../components/Divider'
 
 export const Jobs = () =>
-  <SubSection color={"#FFF"} title={'WORK EXPERIENCE'}>
+  <SubSection color={'#FFF'}
+              title={'WORK EXPERIENCE'}>
     {jobs.map((job, index) =>
       <SubSectionRow key={index + job.name}
                      name={job.name}>
@@ -15,7 +17,7 @@ export const Jobs = () =>
                             Position:
                         </span> {job.title}
         </SubSectionText>
-        <Divider/>
+        <Divider color={'#FFF'}/>
         {job.description &&
         <SubSectionText>
           {job.description}

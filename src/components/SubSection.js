@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BREAKPOINT } from '../constants'
+import { SubsectionDivider } from './Divider'
 
 export const ResumeRow = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ export const LeftSide = styled.div`
   width: 30%;
   text-align: right;
   padding: 0 1rem;
+  font-weight: 800;
   
   @media (max-width: ${BREAKPOINT}){
     text-align: center;
@@ -34,23 +36,13 @@ export const RightSide = styled.div`
   }
 `
 
-export const Divider = styled.hr`
-    border: .5px solid ${props => props.color ? props.color : 'black'};
-    margin: .5rem 0;
-`
-
-const SubsectionDivider = styled(Divider)`
-  margin: 0 auto;
-  width: 80%;
-`
-
 const SubsectionRowTitle = styled.h3`
   margin: 0;
-  font-weight: 200;
+  font-weight: 700;
 `
 
 const SubSectionTitle = styled.h2`
-  font-weight: 300;
+  font-weight: 900;
   margin: .5rem 0;
   text-transform: uppercase;
   color: ${props => props.color ? props.color : 'black'};
