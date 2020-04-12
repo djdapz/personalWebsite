@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { projects } from '../data/projects'
 import styled from 'styled-components'
 import { Section } from '../components/Section'
 import { SubSection } from '../components/SubSection'
 
 const tileSize = '300px'
-
-const ProjectTileLink = styled.a`
-  text-decoration: none;
-`
 
 const ProjectTile = styled.div`
     text-align: center;
@@ -23,7 +19,7 @@ const ProjectTile = styled.div`
     :hover {
         color: #FFF;
         text-shadow: black 0.1em 0.1em 0.2em;
-        cursor: pointer;
+
         
         img {
           display: block;
@@ -53,22 +49,38 @@ const ProjectTileContent = styled.div`
   padding: 2rem;
 `
 
-const Project = ({ project }) =>
-  <ProjectTileLink target="_blank"
-                   href={project.link}
-                   className="tile-link">
-    <ProjectTile>
-      <ProjectImg src={require(`../assets/${project.imgPath}`)}/>
-      <ProjectTileContent>
-        <h1>
-          {project.title}
-        </h1>
-        <p>
-          {project.blurb}
-        </p>
-      </ProjectTileContent>
-    </ProjectTile>
-  </ProjectTileLink>
+const ProjectButton = styled.a`
+  all: unset;
+  background: white;
+  color: black;
+  text-shadow: none;
+  padding: .5rem;
+  cursor: pointer;
+  display: block;
+  margin: .5rem 0;
+  border: transparent 3px solid;
+
+  &:hover{
+    background: #CCC;
+  }
+`
+
+const Project = ({ project }) => {
+  const [hover, setHover] = useState(false)
+  return <ProjectTile onMouseOver={() => setHover(true)}
+                      onMouseLeave={() => setHover(false)}>
+    <ProjectImg src={require(`../assets/${project.imgPath}`)}/>
+    <ProjectTileContent>
+      <h1>
+        {project.title}
+      </h1>
+      <p>
+        {project.blurb}
+      </p>
+      {hover && project.links.map(it => <ProjectButton  target="_blank" href={it.link}>{it.title}</ProjectButton>)}
+    </ProjectTileContent>
+  </ProjectTile>
+}
 
 export const Projects = () =>
   <Section title={'Portfolio'}
