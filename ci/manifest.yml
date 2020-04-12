@@ -4,3 +4,8 @@ applications:
     memory: 256MB
     instances: 1
     path: ../app
+    paths:
+      - dapuzzo.dev
+      - https://dapuzzo.dev
+      - www.dapuzzo.dev
+      - https://www.dapuzzo.dev
