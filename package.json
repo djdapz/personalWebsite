@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scrinpm pts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "test:cy": "cypress open",
     "eject": "react-scripts eject"
