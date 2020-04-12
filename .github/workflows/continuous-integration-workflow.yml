@@ -19,3 +19,25 @@ jobs:
         with:
           name: app
           path: build
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download app
+        uses: actions/download-artifact@v1
+        with:
+          name: app
+      - name: where am i
+        run: pwd
+      - name: where am i 2
+        run: ls -lsa
+      - name: CF PUSH
+        uses: d3sandoval/cloud-foundry-action@1.1.1
+        secrets:
+        env:
+          CF_TARGET_ORG: dapuzzo
+          CF_TARGET_SPACE: development
+          CF_USERNAME: ${{ secrets.cfUsername }}
+          CF_PASSWORD: ${{ secrets.cfPassword }}
+          CF_API: ${{ secrets.cfApi }}
+        args: push -f manifest.yml
