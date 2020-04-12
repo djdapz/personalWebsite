@@ -10,7 +10,7 @@ export const projects = [
       },
       {
         'title': 'Stubhub Scraper 2',
-        'link': 'https://github.com/djdapz/stubhub-scraper/tree/master/concourse',
+        'link': 'https://github.com/djdapz/stubhub-scraper',
         'blurb': 'Tested, Object Oriented version of my original scraper.',
         'imgPath': 'gifs/matrix.gif'
       },
