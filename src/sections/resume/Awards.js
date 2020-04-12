@@ -9,7 +9,9 @@ const Award = ({ award }) =>
     </SubSectionText>
   </SubSectionRow>
 
-export const Awards = () => <SubSection title={'RECOGNITIONS'}>
-  {awards.map(award => <Award award={award} key={award.name}/>)}
+export const Awards = () => <SubSection color={'#FFF'}
+                                        title={'RECOGNITIONS'}>
+  {awards.map(award => <Award award={award}
+                              key={award.name}/>)}
 </SubSection>
 

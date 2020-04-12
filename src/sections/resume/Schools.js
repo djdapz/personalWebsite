@@ -22,7 +22,7 @@ const School = ({ school }) => <SubSectionRow name={school.name}>
   }
 </SubSectionRow>
 
-export const Schools = () => <SubSection title={'EDUCATION'}>
+export const Schools = () => <SubSection title={'EDUCATION'} color={"#FFF"}>
   {schools.map((school) => <School key={school.name} school={school}/>)}
   <br/>
 </SubSection>

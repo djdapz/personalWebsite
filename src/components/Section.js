@@ -19,7 +19,6 @@ const InnerContainer = styled.article`
 
 const Underline = styled.hr`
   border: .5px solid ${props => props.color || '#fff'};
-  max-width: 40rem;
   width: 100%;
   margin-bottom: 2rem;
 `
@@ -34,20 +33,27 @@ const ButtonWrapper = styled.span`
   right: 0
 `
 
-export const Section = ({ children, hideDivider, title, color, dividerColor, id, button }) =>
+const SectionHeader = styled.h1`
+  font-size: 2rem;
+  margin: 1rem 0;
+  font-weight: lighter;
+  color: ${props => props.color}
+`
+
+export const Section = ({ children, title, color, dividerColor, id, button }) =>
   <OuterContiner color={color}
                  id={id}>
     <InnerContainer>
       <SectionTitleBar>
-        <h1>
+        <SectionHeader color={dividerColor}>
           {title}
           <ButtonWrapper>
             {button}
           </ButtonWrapper>
-        </h1>
+        </SectionHeader>
       </SectionTitleBar>
 
-      {!hideDivider && <Underline color={dividerColor}/>}
+      {<Underline color={dividerColor}/>}
       {children}
 
     </InnerContainer>

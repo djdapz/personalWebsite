@@ -8,7 +8,7 @@ const SkillsetLanguages = styled.h3`
   font-weight: lighter;
 `
 export const Languages = () =>
-  <SubSection title={'PROGRAMMING LANGUAGES'}>
+  <SubSection color={"#FFF"} title={'PROGRAMMING LANGUAGES'}>
     {languages.map(it => <SkillsetRow skillset={it}/>)}
   </SubSection>
 

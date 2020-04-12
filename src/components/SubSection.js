@@ -35,8 +35,13 @@ export const RightSide = styled.div`
 `
 
 export const Divider = styled.hr`
-    border: .5px solid ${props => props.lightBackground ? 'black' : 'white'};
+    border: .5px solid ${props => props.color ? props.color : 'black'};
     margin: .5rem 0;
+`
+
+const SubsectionDivider = styled(Divider)`
+  margin: 0 auto;
+  width: 80%;
 `
 
 const SubsectionRowTitle = styled.h3`
@@ -46,7 +51,9 @@ const SubsectionRowTitle = styled.h3`
 
 const SubSectionTitle = styled.h2`
   font-weight: 300;
-  color: ${props => props.lightBackground ? 'black' : 'white'};
+  margin: .5rem 0;
+  text-transform: uppercase;
+  color: ${props => props.color ? props.color : 'black'};
 `
 
 export const SubSectionText = styled.p`
@@ -70,15 +77,15 @@ export const SubSectionRow = ({ name, children }) =>
     right={children}
   />
 
-export const SubSection = ({ title, children, lightBackground }) => <div>
+export const SubSection = ({ title, children, color }) => <div>
   <ResumeRow>
     <LeftSide className="col-md-4">
-      <SubSectionTitle lightBackground={lightBackground}>
+      <SubSectionTitle color={color}>
         {title}
       </SubSectionTitle>
     </LeftSide>
   </ResumeRow>
-  <Divider lightBackground={lightBackground}/>
+  <SubsectionDivider color={color}/>
   {children}
 </div>
 

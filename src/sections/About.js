@@ -35,6 +35,7 @@ const TextSection = styled.p`
 export const About = () =>
   <Section title={'About Me'}
            color={'#f0f0f0'}
+           dividerColor={"#222"}
            id={'about'}>
     <AboutSection>
       <PicOfMe src={me}

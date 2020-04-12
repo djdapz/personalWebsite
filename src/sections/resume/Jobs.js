@@ -3,7 +3,7 @@ import { Divider, SubSection, SubSectionRow, SubSectionText } from '../../compon
 import { jobs } from '../../data/jobs'
 
 export const Jobs = () =>
-  <SubSection title={'WORK EXPERIENCE'}>
+  <SubSection color={"#FFF"} title={'WORK EXPERIENCE'}>
     {jobs.map((job, index) =>
       <SubSectionRow key={index + job.name}
                      name={job.name}>

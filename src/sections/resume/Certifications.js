@@ -3,7 +3,7 @@ import { SubSection, SubSectionRow } from '../../components/SubSection'
 import { certifications } from '../../data/technicalSkills'
 
 export const Certifications = () =>
-  <SubSection title={'CERTIFICATIONS'}>
+  <SubSection color={"#FFF"} title={'CERTIFICATIONS'}>
     {certifications.map(it => <CertificationRow certification={it}/>)}
   </SubSection>
 

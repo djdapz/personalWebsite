@@ -24,7 +24,7 @@ const Club = ({ club }) =>
     {club.list && <ClubList club={club}/>}
   </SubSectionRow>
 
-export const Clubs = () => <SubSection title={'LEADERSHIP AND INVOLVEMENT'}>
+export const Clubs = () => <SubSection color={"#FFF"} title={'LEADERSHIP AND INVOLVEMENT'}>
   {clubs.map(club => <Club club={club} key={club.list_title}/>)}
   <br/>
 </SubSection>
