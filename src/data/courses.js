@@ -198,7 +198,7 @@ export const clubs = [
   {
     "name": "Delta Tau Delta Fraternity",
     "start": "Winter 2014",
-    "end": "present",
+    "end": "Spring 2017",
     "description": "Active brother and leader in the chapter. Leadership discussed in leadership section",
     "list_title": "Positions",
     "list": [
@@ -219,7 +219,7 @@ export const clubs = [
   {
     "name": "Form & Function Marketing",
     "start": "Fall 2014",
-    "end": "present",
+    "end": "Spring 2017",
     "link": "http://www.formandfunctionmarketing.com",
     "description": "Northwestern student marketing agency that provides free consulting to local businesses, non-profits, and student organizations",
     "list_title": "Positions",
