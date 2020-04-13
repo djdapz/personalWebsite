@@ -3,6 +3,43 @@ export const projects = [
     title: 'Post College',
     projects: [
       {
+        'title': 'Options Calculator',
+        'links': [
+          {
+            title: 'Running Project',
+            link: 'https://djd-options-dev.cfapps.io'
+          },
+          {
+            title: 'Source Code',
+            link: 'https://github.com/djdapz/options'
+          },
+        ],
+        'blurb': 'Black-Scholes based options modeling tool.',
+        'imgPath': 'gifs/stocks.gif'
+      },
+      {
+        'title': 'Wine Inventory',
+        'links': [
+          {
+            title: 'Source Code',
+            link: 'https://github.com/djdapz/wine-inventory'
+          },
+        ],
+        'blurb': 'A tool to track a wine cellar made for a family member.',
+        'imgPath': 'gifs/wine.gif'
+      },
+      {
+        'title': 'dapuzzo.dev',
+        'links': [
+          {
+            title: 'Source Code',
+            link: 'https://github.com/djdapz/personalWebsite'
+          },
+        ],
+        'blurb': 'This website.',
+        'imgPath': 'gifs/matrix.gif'
+      },
+      {
         'title': 'Luke Dapuzzo',
         'links': [
           {
@@ -22,7 +59,7 @@ export const projects = [
           }
         ],
         'blurb': 'Tested, Object Oriented version of my original scraper.',
-        'imgPath': 'gifs/matrix.gif'
+        'imgPath': 'gifs/concert.gif'
       },
     ]
   },
@@ -79,7 +116,7 @@ export const projects = [
           },
         ],
         'blurb': 'Automated Software used to collect data on ticket prices for a machine learning project.',
-        'imgPath': 'gifs/matrix.gif'
+        'imgPath': 'gifs/concert.gif'
       },
       {
         'title': 'Auto DJ',
