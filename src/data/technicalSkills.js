@@ -27,13 +27,15 @@ export const categorizedSkills = [
       'Concourse',
       'Jenkins',
       'GitLab CI',
+      'Github Actions',
       'Bamboo'
     ]
   },
   {
     category: 'Deployment Environments',
     content: [
-      'Pivotal Cloud Foundry',
+      'Kubernetes',
+      'Pivotal Cloud Foundry (Tanzu Application Service)',
       'Heroku',
       'AWS (s3, ec2)'
     ]
@@ -63,12 +65,13 @@ export const categorizedSkills = [
       'npm'
     ]
   }
-]
+];
 
 export const certifications = [
-  'Pivotal Certified Developer Java',
-  'Pivotal Certified Instructor | PAL for Developers (Java)',
-]
+  'Certified Kubernetes Application Developer (CKAD) | Linux Foundation',
+  'Certified Developer Java | Pivotal',
+  'Certified Instructor - PAL for Developers (Java) | Pivotal',
+];
 
 export const languages = [
   {
@@ -98,7 +101,8 @@ export const languages = [
   {
     description: 'Can Roll With',
     languages: [
-      'Python'
+      'Python',
+      'Android'
     ],
     libraries: [
       'Angular',
@@ -139,4 +143,4 @@ export const languages = [
     ],
     libraries: []
   }
-]
+];
