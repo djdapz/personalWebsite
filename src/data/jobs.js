@@ -4,7 +4,7 @@ export const jobs = [
     'start': 'September 2017',
     'end': 'present',
     'location': 'Chicago, IL',
-    'title': 'Software Engineer',
+    'title': 'Senior Software Engineer',
     'list': [
       'Partnered with client teams to co-create software. Built web applications, event driven microservices, mapping tools, and DevOps automation engines',
       'Lead architectural efforts and technical side of teams',
