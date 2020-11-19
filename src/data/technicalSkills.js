@@ -102,6 +102,8 @@ export const languages = [
     description: 'Can Roll With',
     languages: [
       'Python',
+      'Swift',
+      'iOS',
       'Android'
     ],
     libraries: [
