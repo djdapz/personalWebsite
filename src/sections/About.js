@@ -6,26 +6,18 @@ import styled from 'styled-components'
 import { Section } from '../components/Section'
 
 const AboutSection = styled.div`
-  @media (max-width: 1000px){
     display: flex;
     flex-wrap: wrap;
-  }
 `
 
 const PicOfMe = styled.img`
 
   object-fit: scale-down;
   
-   @media (min-width: 1000px) {
-      padding: 0 3rem;
-      float: left;  
-      max-width: 40rem;
-  }
-  @media (max-width: 1000px){
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 100%;
-  }
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 30rem;
+  border-radius: 5px;
 `
 
 const TextSection = styled.p`

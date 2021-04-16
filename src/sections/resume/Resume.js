@@ -8,11 +8,11 @@ import { Awards } from './Awards'
 import { Certifications } from './Certifications'
 import React from 'react'
 
-import pdf from '../../assets/pdfs/resume.pdf'
 import { MyButton } from '../../components/MyButton'
 
 const PdfVersion = () => <MyButton className="my-button"
-                                   href={pdf}
+                                   onClick ={() => window.location.href = "./assets/pdfs/resume.pdf"}
+                                   href={"assets/pdfs/resume.pdf"}
                                    rel="noopener noreferrer"
                                    target="_blank">
   PDF Version
