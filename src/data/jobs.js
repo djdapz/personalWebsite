@@ -1,8 +1,16 @@
 export const jobs = [
   {
+    'name': 'Google',
+    'start': 'September 2021',
+    'end': 'present',
+    'location': 'Chicago, IL',
+    'title': 'Software Engineer',
+    'description': 'Google Search on Desktop Web Team'
+  },
+  {
     'name': 'Pivotal Labs',
     'start': 'September 2017',
-    'end': 'present',
+    'end': 'September 2021',
     'location': 'Chicago, IL',
     'title': 'Senior Software Engineer',
     'list': [
@@ -54,5 +62,5 @@ export const jobs = [
     'title': 'Office Intern',
     'description': 'Worked as an Intern preforming office tasks, conducting research, confirming trades, and assisting the back office.'
   }
-]
+];
 
